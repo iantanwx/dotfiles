@@ -1,6 +1,4 @@
-<img alt="dotfiles" width="200" src="https://cdn.rawgit.com/davidosomething/dotfiles/master/meta/dotfiles-logo.png">
-
-My dotfiles. <https://github.com/davidosomething/dotfiles>
+Forked from davidosomething's dotfiles. <https://github.com/davidosomething/dotfiles>
 
 - macOS/OS X, Arch Linux, and Debian compatible
 - XDG compliance wherever possible to keep `$HOME` clean
