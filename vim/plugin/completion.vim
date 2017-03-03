@@ -328,10 +328,10 @@ if dko#IsPlugged('deoplete.nvim')
   " [file] candidates are relative to the buffer path
   let g:deoplete#file#enable_buffer_path = 1
 
-  call deoplete#custom#set('_', 'matchers', [
-        \   'matcher_head',
-        \   'matcher_length',
-        \ ])
+  " call deoplete#custom#set('_', 'matchers', [
+  "       \   'matcher_head',
+  "       \   'matcher_length',
+  "       \ ])
 
   " --------------------------------------------------------------------------
   " Sources for engine based omni-completion (ignored if match s:omni_only)

@@ -139,7 +139,7 @@
 # ============================================================================
 
 [commit]
-	gpgsign = true
+	gpgsign = false
 	template = "~/.dotfiles/git/commit-template"
 
 [core]
@@ -196,12 +196,11 @@
 # ============================================================================
 
 [credential]
-	username = "davidosomething"
+	username = "iantanwx"
 
 [user]
-	name  = "David O'Trakoun"
-	email = "me@davidosomething.com"
-	signingkey = 8CA0D3F4
+	name  = "Ian Tan"
+	email = "iantanwx@gmail.com"
 
 # ============================================================================
 # Local
