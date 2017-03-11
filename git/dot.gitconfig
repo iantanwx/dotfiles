@@ -122,8 +122,8 @@
 
 [url "git://github.com/"]
 	insteadOf = "github:"
-
 [url "git@gist.github.com:"]
+
 	insteadOf = "gst:"
 	pushInsteadOf = "gist:"
 	pushInsteadOf = "git://gist.github.com/"
@@ -145,7 +145,6 @@
 	compression = -1
 # editor = "vim -f" ; removed so git will use env EDITOR or VISUAL
 	sharedRepository = 0664
-	commentchar = ";"
 # pager = less -x4 ; removed so git will use the env GIT_PAGER
 
 [diff]
