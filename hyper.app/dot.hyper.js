@@ -1,10 +1,13 @@
 module.exports = {
   config: {
+    // default working dir
+    workingDirectory: '~/Development',
+
     // default font size in pixels for all tabs
-    fontSize: 12,
+    fontSize: 14,
 
     // font family with optional fallbacks
-    fontFamily: '"Fira Mono for Powerline", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
+    fontFamily: '"Fira Code"',
 
     // terminal cursor background color (hex)
     cursorColor: '#F81CE5',
@@ -54,29 +57,32 @@ module.exports = {
   // examples:
   //   `hypersolar`
   //   `@company/project`
-  //   `project#1.0.1`
   plugins: [
+  //   `project#1.0.1`
     // Alt buffer scrolling
     'hyperterm-alternatescroll',
 
     //// blinking cursor
     'hyperterm-blink',
 
-    'hyperterm-base16-tomorrow-night',
+    // material colour theme
+    'hyper-material-theme',
 
-    //'hyperterm-resboned',
+    // 'hyperterm-base16-tomorrow-night',
 
-    //// fancy tabs
-    //'hyperterm-mactabs',
+    // 'hyperterm-resboned',
 
-    //// draggable tabs
-    //'hyperterm-tabs',
+    // // fancy tabs
+    // 'hyperterm-mactabs',
+
+    // draggable tabs
+    'hyperterm-tabs',
 
     // bold active tab
     'hyperterm-bold-tab',
 
-    //// tab icons
-    //'hyperterm-tab-icons',
+    // tab icons
+    'hyperterm-tab-icons',
 
     //// add focus-gained/lost events
     'hyperterm-focus-reporting',
@@ -84,11 +90,14 @@ module.exports = {
     //// respect xterm titles
     'hyperterm-title',
 
-    //// status bar
-    //'hyperline',
+    // status bar
+    'hyperline',
 
     // clickable links in same window... buggy
     'hyperlinks',
+
+    // default working directory
+    'hyperterm-working-directory'
 
     //// clickable links, but behave like iterm... buggy
     //'hyperlinks-iterm',
