@@ -526,6 +526,8 @@ let g:loaded_zipPlugin = 1
 " ----------------------------------------------------------------------------
 
 " netrw in details format when no vimfiler
+
+let g:netrw_banner = 0
 let g:netrw_liststyle      = 3
 let g:netrw_home           = expand(g:dko#vim_dir . '/.tmp/cache')
 let g:netrw_browsex_viewer = has('mac') ? 'open' : 'xdg-open'
