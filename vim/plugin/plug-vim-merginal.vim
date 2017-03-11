@@ -1,1 +1,1 @@
-nnoremap <leader>gml :Merginal<CR>
+nnoremap <C-m> :MerginalToggle<CR>
