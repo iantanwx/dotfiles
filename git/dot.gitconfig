@@ -140,7 +140,6 @@
 
 [commit]
 	gpgsign = false
-	template = "~/.dotfiles/git/commit-template"
 
 [core]
 	compression = -1
