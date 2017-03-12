@@ -16,19 +16,48 @@ module.exports = {
     foregroundColor: '#fff',
 
     // terminal background color
-    backgroundColor: '#000',
+    backgroundColor: '#000000',
 
     // border color (window, tabs)
     borderColor: '#333',
 
     // custom css to embed in the main window
-    css: '',
+    css: `
+      .tabs_nav {
+        height: 18px;
+      }
+
+      .tabs_nav * {
+        height: 100%;
+      }
+
+      .tab_icon {
+        height: 14px;
+        top: 2px;
+      }
+
+      .tab_shape {
+        height: 6px;
+      }
+
+      .tab_textInner {
+        font-size: 10px;
+        line-height: 18px;
+      }
+
+      .terms_terms {
+        margin-top: 18px;
+      }
+    `,
 
     // custom padding (css format, i.e.: `top right bottom left`)
-    termCSS: '',
+    termCSS: `
+      x-screen x-row {
+        font-variant-ligatures: initial;
+      }
+    `,
 
-    // custom padding
-    padding: '12px 14px',
+    padding: '0 0',
 
     // some color overrides. see http://bit.ly/29k1iU2 for
     // the full list
@@ -52,28 +81,18 @@ module.exports = {
     ]
   },
 
-  // a list of plugins to fetch and install from npm
-  // format: [@org/]project[#version]
-  // examples:
-  //   `hypersolar`
-  //   `@company/project`
   plugins: [
-  //   `project#1.0.1`
     // Alt buffer scrolling
     'hyperterm-alternatescroll',
 
     //// blinking cursor
     'hyperterm-blink',
 
-    // material colour theme
-    'hyper-material-theme',
-
     // 'hyperterm-base16-tomorrow-night',
 
     // 'hyperterm-resboned',
 
-    // // fancy tabs
-    // 'hyperterm-mactabs',
+    'hyperterm-mactabs',
 
     // draggable tabs
     'hyperterm-tabs',
@@ -81,8 +100,8 @@ module.exports = {
     // bold active tab
     'hyperterm-bold-tab',
 
-    // tab icons
-    'hyperterm-tab-icons',
+    // // tab icons
+    // 'hyperterm-tab-icons',
 
     //// add focus-gained/lost events
     'hyperterm-focus-reporting',
@@ -91,16 +110,13 @@ module.exports = {
     'hyperterm-title',
 
     // status bar
-    'hyperline',
+    'hyper-statusline',
 
     // clickable links in same window... buggy
     'hyperlinks',
 
     // default working directory
-    'hyperterm-working-directory'
-
-    //// clickable links, but behave like iterm... buggy
-    //'hyperlinks-iterm',
+    'hyperterm-working-directory',
   ],
 
   // in development, you can create a directory under
