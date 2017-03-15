@@ -532,6 +532,7 @@ let g:netrw_liststyle      = 3
 let g:netrw_home           = expand(g:dko#vim_dir . '/.tmp/cache')
 let g:netrw_browsex_viewer = has('mac') ? 'open' : 'xdg-open'
 
+
 " ----------------------------------------------------------------------------
 " Plugins: load - called when vim-plug available
 " ----------------------------------------------------------------------------
@@ -539,6 +540,10 @@ let g:netrw_browsex_viewer = has('mac') ? 'open' : 'xdg-open'
 function! s:LoadPlugins()
   " Notes on adding plugins:
   " - Absolutely do not use 'for' if the plugin provides an `ftdetect/`
+  " ========================================================================
+  " Plug: NERDTree
+  " ========================================================================
+  Plug 'scrooloose/nerdtree'
 
   " ========================================================================
   " Plug: Colorscheme
