@@ -4,3 +4,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Map key to toggle
 nnoremap <C-n> :NERDTreeToggle<CR>
+
+" show dotfiles by default<Plug>
+let NERDTreeShowHidden = 1
+
