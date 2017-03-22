@@ -339,7 +339,7 @@ set nrformats-=octal                  " never use octal when <C-x> or <C-a>
 " ----------------------------------------------------------------------------
 
 set nowrap
-set nojoinspaces                      " J command doesn't add extra space
+"set nojoinspaces                      " J command doesn't add extra space
 
 " ----------------------------------------------------------------------------
 " Indenting - overridden by indent plugins
@@ -647,6 +647,7 @@ function! s:LoadPlugins()
 
   " support flow
   Plug 'flowtype/vim-flow', { 'for': 'javascript' }
+  let g:flow#autoclose = 1
 
   Plug 'tyru/current-func-info.vim'
 
@@ -663,7 +664,8 @@ function! s:LoadPlugins()
           \ has('nvim') ? { 'do': ':UpdateRemotePlugins' } : {}
 
     " Flow deoplete integration
-    Plug 'steelsojka/deoplete-flow'
+    Plug 'wokalski/autocomplete-flow'
+
     " Mixed-filetype completion for Shougo complete, e.g. highlight JS within
     " Markdown fenced code blocks.
     Plug 'Shougo/context_filetype.vim'
@@ -680,8 +682,6 @@ function! s:LoadPlugins()
   " ========================================================================
   " Plug: Editing keys
   " ========================================================================
-
-  Plug 'godlygeek/tabular', { 'on': [ 'Tabularize' ] }
 
   " custom C-x C-a mappings, see plugin/plug-increment-activator.vim
   Plug 'nishigori/increment-activator'
@@ -760,12 +760,6 @@ function! s:LoadPlugins()
   " Upstreams
   Plug 'chrisbra/vim-sh-indent'
   Plug 'chrisbra/vim-zsh'
-
-  " ========================================================================
-  " Language: D
-  " ========================================================================
-
-  Plug 'idanarye/vim-dutyl', { 'for': 'd' }
 
   " ========================================================================
   " Language: Git

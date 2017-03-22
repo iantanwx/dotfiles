@@ -253,6 +253,23 @@ endif
 
 if dko#IsPlugged('deoplete-padawan')
   "let g:deoplete#sources#padawan#server_autostart = 0
+  "
+" ============================================================================
+" Completion Plugin: deoplete-flow
+" ============================================================================
+
+if dko#isPlugged('deoplete-flow')
+  let local_flow = finddir('node_modules', '.;') . '/.bin/flow'
+
+  if matchstr(local_flow, "^\/\\w") == ''
+    let local_flow= getcwd() . "/" . local_flow
+  endif
+
+  if executable(local_flow)
+    let g:flow#flowpath = local_flow
+    let g:deoplete#sources#flow#flow_bin = local_flow
+  endif
+endif
 
 " ============================================================================
 " Completion Plugin: phpcd.vim
