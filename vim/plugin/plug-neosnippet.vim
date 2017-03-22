@@ -5,6 +5,7 @@ let s:cpo_save = &cpoptions
 set cpoptions&vim
 
 " ============================================================================
+let g:neosnippet#enable_completed_snippet = 1
 
 " Snippets userdir
 let g:neosnippet#snippets_directory = g:dko#vim_dir . '/snippets'
