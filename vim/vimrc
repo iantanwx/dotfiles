@@ -651,7 +651,6 @@ function! s:LoadPlugins()
 
   Plug 'tyru/current-func-info.vim'
 
-
   " ========================================================================
   " Plug: Completion
   " ========================================================================
@@ -663,8 +662,6 @@ function! s:LoadPlugins()
     Plug 'Shougo/deoplete.nvim',
           \ has('nvim') ? { 'do': ':UpdateRemotePlugins' } : {}
 
-    " Flow deoplete integration
-    Plug 'wokalski/autocomplete-flow'
 
     " Mixed-filetype completion for Shougo complete, e.g. highlight JS within
     " Markdown fenced code blocks.
@@ -673,6 +670,9 @@ function! s:LoadPlugins()
     Plug 'Shougo/neosnippet'
           \| Plug 'honza/vim-snippets'
           \| Plug 'Shougo/neosnippet-snippets'
+    
+    " Flow deoplete integration
+    Plug 'wokalski/autocomplete-flow'
 
     if has('python3')
       Plug 'zchee/deoplete-jedi'
@@ -682,9 +682,6 @@ function! s:LoadPlugins()
   " ========================================================================
   " Plug: Editing keys
   " ========================================================================
-
-  " custom C-x C-a mappings, see plugin/plug-increment-activator.vim
-  Plug 'nishigori/increment-activator'
 
   Plug 'tomtom/tcomment_vim'
 
@@ -735,16 +732,6 @@ function! s:LoadPlugins()
         \| Plug 'kana/vim-textobj-function'
                 \| Plug 'thinca/vim-textobj-function-javascript',
                 \   { 'for': [ 'javascript' ] }
-                \| Plug 'kentaro/vim-textobj-function-php', { 'for': [ 'php' ] }
-
-  " HR with <Leader>f[CHAR]
-  Plug g:dko#vim_dir . '/mine/vim-hr'
-
-  " <Leader>C <Plug>(dkosmallcaps)
-  Plug g:dko#vim_dir . '/mine/vim-smallcaps'
-
-  " Toggle movement mode line-wise/display-wise
-  Plug g:dko#vim_dir . '/mine/vim-movemode'
 
   " ========================================================================
   " Plug: Language
@@ -923,13 +910,6 @@ function! s:LoadPlugins()
   " ----------------------------------------
 
   " Completion
-  " 'pbogut/deoplete-padawan'     - server based completion for deoplete.nvim
-  " 'phpvim/phpcd.vim'            - server based completion
-  " 'mkusher/padawan.vim'         - server based completion for VIM
-  " 'm2mdas/phpcomplete-extended' - fast via vimproc, but dead
-  " 'shawncplus/phpcomplete.vim'  - slow as fuck, included in VIMRUNTIME.
-  "                                 this is upstream. tags based
-
   " Set to completefunc
   Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
 
@@ -986,7 +966,6 @@ function! s:LoadPlugins()
   Plug 'JulesWang/css.vim'
         \| Plug 'hail2u/vim-css3-syntax'
         \| Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss'] }
-        "\| Plug 'davidosomething/scss-syntax.vim', { 'for': ['scss'] }
 
   " ----------------------------------------
   " Features
@@ -994,17 +973,10 @@ function! s:LoadPlugins()
 
   " Hex (et al) color highlighting
   "Plug 'Rykka/colorv.vim' -- requires python
-  "Plug 'chrisbra/Colorizer' -- slower and not as complete
   Plug 'ap/vim-css-color'
 
   " Omnicompletion, this is beta repo, where stables are already in VIMRUNTIME
   Plug 'othree/csscomplete.vim'
-
-  " ========================================================================
-  " Language: .tmux.conf
-  " ========================================================================
-
-  Plug 'tmux-plugins/vim-tmux'
 
   " ========================================================================
   " Language: VimL
@@ -1060,10 +1032,6 @@ function! s:LoadPlugins()
 
   " Always show signs column with marks / vcs / qf
   Plug 'tomtom/quickfixsigns_vim'
-
-  " Alternatively use sjl/vitality.vim -- but that has some cursor shape stuff
-  " that Neovim doesn't need.
-  Plug 'tmux-plugins/vim-tmux-focus-events'
 endfunction
 
 " ----------------------------------------------------------------------------
