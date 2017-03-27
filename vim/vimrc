@@ -645,6 +645,8 @@ function! s:LoadPlugins()
 
   Plug 'neomake/neomake'
 
+  Plug 'sbdchd/neoformat'
+
   " support flow
   Plug 'flowtype/vim-flow', { 'for': 'javascript' }
   let g:flow#autoclose = 1
@@ -670,7 +672,7 @@ function! s:LoadPlugins()
     Plug 'Shougo/neosnippet'
           \| Plug 'honza/vim-snippets'
           \| Plug 'Shougo/neosnippet-snippets'
-    
+    "
     " Flow deoplete integration
     Plug 'wokalski/autocomplete-flow'
 
