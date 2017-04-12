@@ -696,6 +696,8 @@ function! s:LoadPlugins()
   " co-bindings
   Plug 'tpope/vim-unimpaired'
 
+  Plug 'tpope/vim-surround'
+
   " used for line bubbling commands (instead of unimpared!)
   " Consider also t9md/vim-textmanip
   Plug 'matze/vim-move'
@@ -703,7 +705,6 @@ function! s:LoadPlugins()
   " <Leader>s(a/r/d) to modify surrounding the pending operator
   " <Leader>c to toggle CamelCase/snak_e the pending operator
   Plug 'kana/vim-operator-user'
-        \| Plug 'rhysd/vim-operator-surround'
         \| Plug 'tyru/operator-camelize.vim'
 
   " Sorted by what the textobj provides
