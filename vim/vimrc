@@ -628,7 +628,6 @@ function! s:LoadPlugins()
   " Tries to run on :Gita commands
   " @see https://github.com/sgur/vim-editorconfig/issues/7
   Plug 'sgur/vim-editorconfig'
-  "Plug 'davidosomething/vim-editorconfig', { 'branch': 'lint-skip-comments' }
 
   " ========================================================================
   " Plug: Input, syntax, spacing
@@ -648,10 +647,8 @@ function! s:LoadPlugins()
   Plug 'sbdchd/neoformat'
 
   " support flow
-  Plug 'flowtype/vim-flow', { 'for': 'javascript' }
-  let g:flow#autoclose = 1
-
-  Plug 'tyru/current-func-info.vim'
+  " Plug 'flowtype/vim-flow', { 'for': 'javascript' }
+  " let g:flow#autoclose = 1
 
   " ========================================================================
   " Plug: Completion
@@ -663,11 +660,6 @@ function! s:LoadPlugins()
   if (has('nvim') && has('python3')) " || has('patch-7.4.1758')
     Plug 'Shougo/deoplete.nvim',
           \ has('nvim') ? { 'do': ':UpdateRemotePlugins' } : {}
-
-
-    " Mixed-filetype completion for Shougo complete, e.g. highlight JS within
-    " Markdown fenced code blocks.
-    Plug 'Shougo/context_filetype.vim'
 
     Plug 'Shougo/neosnippet'
           \| Plug 'honza/vim-snippets'
@@ -794,28 +786,8 @@ function! s:LoadPlugins()
   " Configured in plugin/plug-vim-javascript.vim
   " ----------------------------------------
 
-  let s:js_mode = 'pangloss'
-  if s:js_mode ==# 'pangloss'
-    " PANGLOSS MODE
-    " 1.  Preferring pangloss for now since I like the included indentexpr
-    "     it also has a node ftdetect, but that is the same as in
-    "     moll/vim-node
-    " 2.  After syntax, ftplugin, indent for JSX
     Plug 'pangloss/vim-javascript'
           \| Plug 'mxw/vim-jsx'
-
-  elseif s:js_mode ==# 'othree'
-    " YAJS MODE
-    " 1.  yajs.vim highlighting is a little more robust than the pangloss one.
-    " 2.  The libraries syntax adds unique highlighting for
-    "     jQuery,backbone,etc. and I've confirmed it is only compatible with
-    "     yajs.vim as of 2016-11-03.
-    " 3.  es.next support has possible jsx indent conflicts
-    "     @see https://github.com/othree/es.next.syntax.vim/issues/5
-    Plug 'othree/yajs.vim'
-          \| Plug 'othree/javascript-libraries-syntax.vim'
-          \| Plug 'othree/es.next.syntax.vim'
-  endif
 
   " ----------------------------------------
   " Features
@@ -883,30 +855,8 @@ function! s:LoadPlugins()
   " ----------------------------------------
   " Syntax
   " ----------------------------------------
-
-  " creates twig ft
-  "Plug 'evidens/vim-twig'
-
-  " Syntax
-
-  " Neovim comes with
-  "   https://jasonwoof.com/gitweb/?p=vim-syntax.git;a=blob;f=php.vim;hb=HEAD
-  " 2072 has a fork, but it is actually older than the one in Neovim runtime
-  "   https://github.com/2072/vim-syntax-for-PHP/
-
-  " This is catered towards PHP 5.x, so while it is actively maintained, it is
-  " for an old PHP.
-  "Plug 'StanAngeloff/php.vim', { 'for': 'php' }
-
   " Indent
-  " 2072 is included with vim, this is upstream
   Plug '2072/PHP-Indenting-for-VIm'
-
-  " Fix indent of HTML in all PHP files -- basically adds indent/html.vim when
-  " outside of PHP block.
-  " This actually never loads since 2072 sets b:did_indent
-  " Also not needed since 2072 uses <script.*> style indenting for HTML
-  "Plug 'captbaritone/better-indent-support-for-php-with-html'
 
   " ----------------------------------------
   " Features
