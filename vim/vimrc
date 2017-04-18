@@ -986,19 +986,6 @@ augroup dkowindow
         \ if winnr('$') == 1 && &buftype == 'quickfix' | quit | endif
 augroup END
 
-" Tabline
-augroup dkotabline
-  autocmd!
-
-  autocmd VimEnter
-        \ *
-        \ set tabline=%!dkotabline#Output()
-
-  autocmd BufWinEnter,Colorscheme,CursorMoved,Filetype,SessionLoadPost,WinEnter
-        \ *
-        \ call dkotabline#Refresh()
-augroup END
-
 augroup dkoquickfix
     autocmd!
     " auto open quickfix and loclist?
