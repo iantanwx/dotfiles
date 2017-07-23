@@ -321,11 +321,3 @@ autocmd dkoneomake      BufWritePost,FileChangedShellPost
       \ *
       \ call s:MaybeNeomake()
 
-autocmd dkostatusline   User
-      \ NeomakeCountsChanged
-      \ call dkostatus#Refresh()
-
-autocmd dkostatusline   User
-      \ NeomakeFinished
-      \ call dkostatus#Refresh()
-
