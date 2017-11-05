@@ -3,7 +3,7 @@
 
 set termguicolors
 
-let g:dko_nvim_dir = fnamemodify(resolve(expand('$MYVIMRC')), ':p:h')
+let g:nvim_dir = fnamemodify(resolve(expand('$MYVIMRC')), ':p:h')
 
 " ============================================================================
 " :terminal emulator
@@ -43,4 +43,6 @@ endif
 
 " =============================================================================
 
-execute 'source ' . g:dko_nvim_dir . '/vimrc'
+execute 'source ' . g:nvim_dir . '/vimrc'
+execute 'source ' . g:nvim_dir . '/plugins.vim'
+execute 'source ' . g:nvim_dir . '/keymap.vim'
