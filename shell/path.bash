@@ -50,11 +50,10 @@ PATH="/usr/local/bin:/usr/local/sbin:${DKO_SYSTEM_PATH}"
 # composer; COMPOSER_HOME is in shell/vars.bash
 PATH="${COMPOSER_HOME}/vendor/bin:${PATH}"
 
-# luarocks per-user rock tree
-PATH="${HOME}/.luarocks/bin:${PATH}"
-
 # go -- prefer go binaries over composer; GOPATH is in shell/vars.bash
 PATH="${GOPATH}/bin:${PATH}"
+
+PATH="${HOME}/.yarn/bin:${PATH}"
 
 # ----------------------------------------------------------------------------
 # Local bin
