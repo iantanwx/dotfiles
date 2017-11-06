@@ -1,0 +1,23 @@
+snippet provm
+// Provide injects the model into the container,
+func (${1:arg} ${2:type}) Provide(c *dig.Container) {
+    c.Provide(func() $2 {
+
+    return $1
+  }),
+}
+endsnippet
+
+snippet initr
+// Init fetches the needed dependencies from the container,
+// and injects the repository back in,
+func ($1 *$2Repository) Init(c *dig.Container) err {
+  err := c.Provide(func(db *gorm.DB) *$2Repository {
+    $1.DB = db
+
+    return $1
+  })
+
+  return err
+}
+endsnippet

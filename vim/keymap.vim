@@ -22,8 +22,8 @@ inoremap jj <Esc>
 
 " Deoplete
 inoremap <silent> <CR> <C-r>=<SID>cr_fn()<CR>
-function! s:cr_fn() abort
-  return deoplete#close_popup() . "\<CR>"
+function! s:cr_fn()
+  return (pumvisible() ? "\<C-y>" : "") . "\<CR>"
 endfunction
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><BS> deoplete#smart_close_popup()."\<C-h>"

@@ -43,7 +43,7 @@ call neomake#configure#automake('w')
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
 let g:deoplete#auto_complete_start_length = 1
-set completeopt+=noinsert
+call deoplete#custom#source('_', 'converters', ['converter_remove_overlap', 'converter_truncate_abbr', 'converter_truncate_menu', 'converter_auto_delimiter', 'converter_auto_paren'])
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -54,7 +54,6 @@ let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 1
-let g:go_auto_sameids = 1
 set updatetime=100 " this sets go type info to show almost instantaneously
 autocmd FileType go nmap <buffer> <leader>t :GoTest -v<CR>
 
