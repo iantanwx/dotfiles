@@ -56,6 +56,10 @@ set cursorline
 
 set synmaxcol=512                     " don't syntax highlight long lines
 
+" Splits
+set splitbelow
+set splitright
+
 " ------------------------------------
 " Tab line
 " ------------------------------------
@@ -143,7 +147,6 @@ set undoreload=10000
 " ----------------------------------------------------------------------------
 
 filetype plugin on
-set omnifunc=syntaxcomplete#Complete
 set isfname-==
 set complete-=i                       " don't complete includes
 set complete-=t                       " don't complete tags
@@ -253,6 +256,9 @@ set noshiftround
 set smarttab
 
 set backspace=indent,eol,start        " bs anything
+
+" Use real tabs for go files
+autocmd FileType go setlocal shiftwidth=4 tabstop=4 softtabstop=4 noexpandtab
 
 " ----------------------------------------------------------------------------
 " Match and search
