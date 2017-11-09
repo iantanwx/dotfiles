@@ -10,6 +10,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Neoterm
+nnoremap <silent> <leader>to :Ttoggle<CR>
 nnoremap <silent> <leader>th :call neoterm#close()<CR>
 nnoremap <silent> <leader>tc :call neoterm#clear()<CR>
 nnoremap <silent> <leader>tk :call neoterm#kill()<CR>

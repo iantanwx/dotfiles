@@ -71,9 +71,11 @@ let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 1
 set updatetime=100 " this sets go type info to show almost instantaneously
-autocmd FileType go nmap <buffer> <leader>t :GoTest -v<CR>
 " automatically run tests for related package
-autocmd BufWritePost *.go call GoTestCurrentFile()
+augroup golang
+  autocmd!
+  autocmd BufWritePost *.go call GoTestCurrentFile()
+augroup END
 
 " TS/JS-specific
 let g:deoplete#sources#ternjs#filetypes = [
