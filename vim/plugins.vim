@@ -52,7 +52,15 @@ call deoplete#custom#source('_', 'converters', ['converter_remove_overlap', 'con
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "snip"]
 
+" Neoterm
+let g:neoterm_size=winheight(0)/3 " constrain height of terminal window to 33%
+
 " Go-specific
+function! GoTestCurrentFile()
+  execute 'Topen'
+  call neoterm#do('cd %:p:h && go test -timeout 30s')
+endfunction
+
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 let g:go_highlight_structs = 1
@@ -64,6 +72,8 @@ let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 1
 set updatetime=100 " this sets go type info to show almost instantaneously
 autocmd FileType go nmap <buffer> <leader>t :GoTest -v<CR>
+" automatically run tests for related package
+autocmd BufWritePost *.go call GoTestCurrentFile()
 
 " TS/JS-specific
 let g:deoplete#sources#ternjs#filetypes = [

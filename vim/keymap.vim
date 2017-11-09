@@ -9,6 +9,11 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Neoterm
+nnoremap <silent> <leader>th :call neoterm#close()<CR>
+nnoremap <silent> <leader>tc :call neoterm#clear()<CR>
+nnoremap <silent> <leader>tk :call neoterm#kill()<CR>
+
 " vim-fugitive
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
@@ -29,5 +34,6 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><BS> deoplete#smart_close_popup()."\<C-h>"
 
 " Plugin-specific
+autocmd FileType go nmap <buffer> <leader>T :GoTest -v<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-p> :FZF <C-R>=expand('%:h')<CR><CR>
