@@ -1,3 +1,81 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "vim/bundle/deoplete-go"]
+	path = vim/bundle/deoplete-go
+	url = https://github.com/zchee/deoplete-go
+[submodule "vim/bundle/deoplete-ternjs"]
+	path = vim/bundle/deoplete-ternjs
+	url = https://github.com/carlitux/deoplete-ternjs
+[submodule "vim/bundle/deoplete.nvim"]
+	path = vim/bundle/deoplete.nvim
+	url = https://github.com/Shougo/deoplete.nvim
+[submodule "vim/bundle/fzf.vim"]
+	path = vim/bundle/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
+[submodule "vim/bundle/fzf"]
+	path = vim/bundle/fzf
+	url = https://github.com/junegunn/fzf
+[submodule "vim/bundle/neomake"]
+	path = vim/bundle/neomake
+	url = https://github.com/neomake/neomake
+[submodule "vim/bundle/neopairs.vim"]
+	path = vim/bundle/neopairs.vim
+	url = https://github.com/Shougo/neopairs.vim
+[submodule "vim/bundle/neoterm"]
+	path = vim/bundle/neoterm
+	url = https://github.com/kassio/neoterm
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "vim/bundle/nvim-typescript"]
+	path = vim/bundle/nvim-typescript
+	url = https://github.com/mhartington/nvim-typescript
+[submodule "vim/bundle/tern_for_vim"]
+	path = vim/bundle/tern_for_vim
+	url = https://github.com/ternjs/tern_for_vim
+[submodule "vim/bundle/ultisnips"]
+	path = vim/bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips
+[submodule "vim/bundle/vim-airline"]
+	path = vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "vim/bundle/vim-airline-themes"]
+	path = vim/bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "vim/bundle/vim-commentary"]
+	path = vim/bundle/vim-commentary
+	url = https://github.com/tpope/vim-commentary
+[submodule "vim/bundle/vim-css3-syntax"]
+	path = vim/bundle/vim-css3-syntax
+	url = https://github.com/hail2u/vim-css3-syntax
+[submodule "vim/bundle/vim-fugitive"]
+	path = vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "vim/bundle/vim-go"]
+	path = vim/bundle/vim-go
+	url = https://github.com/fatih/vim-go
+[submodule "vim/bundle/vim-hybrid-material"]
+	path = vim/bundle/vim-hybrid-material
+	url = https://github.com/kristijanhusak/vim-hybrid-material
+[submodule "vim/bundle/vim-js-indent"]
+	path = vim/bundle/vim-js-indent
+	url = https://github.com/jason0x43/vim-js-indent
+[submodule "vim/bundle/vim-js-pretty-template"]
+	path = vim/bundle/vim-js-pretty-template
+	url = https://github.com/Quramy/vim-js-pretty-template
+[submodule "vim/bundle/vim-styled-jsx"]
+	path = vim/bundle/vim-styled-jsx
+	url = https://github.com/alampros/vim-styled-jsx
+[submodule "vim/bundle/vim-surround"]
+	path = vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "vim/bundle/vim-unimpaired"]
+	path = vim/bundle/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired
+[submodule "vim/bundle/yajs.vim"]
+	path = vim/bundle/yajs.vim
+	url = https://github.com/othree/yajs.vim
+[submodule "vim/bundle/yats.vim"]
+	path = vim/bundle/yats.vim
+	url = https://github.com/HerringtonDarkholme/yats.vim
