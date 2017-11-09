@@ -49,13 +49,13 @@ autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif " close
 call deoplete#custom#source('_', 'converters', ['converter_remove_overlap', 'converter_truncate_abbr', 'converter_truncate_menu', 'converter_auto_delimiter', 'converter_auto_paren'])
 
 " UltiSnips
+let g:UltiSnipsRemoveSelectModeMappings=1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "snip"]
 
 " Neoterm
 let g:neoterm_size=winheight(0)/3 " constrain height of terminal window to 33%
 let g:neoterm_fixedsize=1
-let g:neoterm_autoscroll=1
 
 " Go-specific
 function! GoTestCurrentFile()

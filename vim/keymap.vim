@@ -4,10 +4,10 @@ let mapleader = "\<Space>"
 
 " Normal Mode
 " Buffers
+nnoremap <C-H> <C-W><C-H>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 
 " Neoterm
 nnoremap <silent> <leader>to :Ttoggle<CR>
@@ -37,4 +37,4 @@ inoremap <expr><BS> deoplete#smart_close_popup()."\<C-h>"
 " Plugin-specific
 autocmd FileType go nmap <buffer> <leader>T :GoTest -v<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
-nnoremap <C-p> :FZF <C-R>=expand('%:h')<CR><CR>
+nnoremap <C-p> :FZF <C-R>= FindRootDirectory()<CR><CR>
