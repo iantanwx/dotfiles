@@ -1,10 +1,12 @@
 " Colour Scheme
 syntax on
-let g:onedark_termcolors=16
-colorscheme onedark
+let base16colorspace=256
+set background=dark
+colorscheme base16-material-dark
+let g:enable_bold_font = 1
+let g:enable_italic_font = 1
 
 " Airline
-let g:airline_theme='onedark'
 let g:airline#extensions#tabline#enabled = 1
 
 " FZF
@@ -43,6 +45,7 @@ call neomake#configure#automake('w')
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
 let g:deoplete#auto_complete_start_length = 1
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif " close preview window after completion
 call deoplete#custom#source('_', 'converters', ['converter_remove_overlap', 'converter_truncate_abbr', 'converter_truncate_menu', 'converter_auto_delimiter', 'converter_auto_paren'])
 
 " UltiSnips
@@ -52,6 +55,11 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "snip"]
 " Go-specific
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+let g:go_highlight_structs = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 1
 set updatetime=100 " this sets go type info to show almost instantaneously
