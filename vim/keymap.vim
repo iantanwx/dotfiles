@@ -8,6 +8,7 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
+nnoremap <silent> <leader>q :Bdelete<CR>
 
 " Neoterm
 nnoremap <silent> <leader>to :Ttoggle<CR>

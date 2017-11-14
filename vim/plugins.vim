@@ -60,7 +60,7 @@ let g:neoterm_fixedsize=1
 " Go-specific
 function! GoTestCurrentFile()
   execute 'Topen'
-  call neoterm#do('cd %:p:h && go test -timeout 30s')
+  call neoterm#do('cd %:p:h && go test -v -timeout 30s')
 endfunction
 
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
