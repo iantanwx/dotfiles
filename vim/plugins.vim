@@ -8,6 +8,7 @@ let g:enable_italic_font = 1
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#neomake#enabled = 1
 
 " FZF
 let g:fzf_command_prefix = 'FZF'
@@ -37,7 +38,7 @@ let g:neomake_warning_sign = {'text': '∆', 'texthl': 'NeomakeWarningSign'}
 let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign'}
 let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
 
-let g:neomake_go_enabled_makers = ['go', 'gometalinter']
+let g:neomake_go_enabled_makers = ['golint', 'govet', 'gometalinter']
 
 call neomake#configure#automake('w')
 
@@ -59,7 +60,6 @@ let g:neoterm_fixedsize=1
 
 " Go-specific
 function! GoTestCurrentFile()
-  execute 'Topen'
   call neoterm#do('cd %:p:h && go test -v -timeout 30s')
 endfunction
 
