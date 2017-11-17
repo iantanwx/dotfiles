@@ -37,5 +37,8 @@ inoremap <expr><BS> deoplete#smart_close_popup()."\<C-h>"
 
 " Plugin-specific
 autocmd FileType go nmap <buffer> <leader>T :GoTest -v<CR>
+autocmd FileType go nnoremap <silent> <leader>db :DlvToggleBreakpoint<CR>
+autocmd FileType go nnoremap <leader>dd :DlvDebug<CR>
+autocmd FileType go nnoremap <leader>dt :DlvTest<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-p> :FZF <C-R>= FindRootDirectory()<CR><CR>
