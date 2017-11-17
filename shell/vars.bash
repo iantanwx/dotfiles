@@ -91,7 +91,7 @@ export DOCKER_CONFIG="${XDG_CONFIG_HOME}/docker"
 
 # go
 # used in shell/paths
-if [ -d "${HOME}/Develoment/go" ]; then
+if [ -d "${HOME}/Development/go" ]; then
   export GOPATH="${HOME}/Development/go"
 else
   export GOPATH="${HOME}/Projects/go"
