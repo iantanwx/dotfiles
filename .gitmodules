@@ -85,3 +85,6 @@
 [submodule "vim/bundle/vim-bbye"]
 	path = vim/bundle/vim-bbye
 	url = https://github.com/moll/vim-bbye
+[submodule "vim/bundle/vim-delve"]
+	path = vim/bundle/vim-delve
+	url = https://github.com/sebdah/vim-delve
