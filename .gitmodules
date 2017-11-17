@@ -88,3 +88,6 @@
 [submodule "vim/bundle/vim-delve"]
 	path = vim/bundle/vim-delve
 	url = https://github.com/sebdah/vim-delve
+[submodule "vim/bundle/ListToggle"]
+	path = vim/bundle/ListToggle
+	url = https://github.com/Valloric/ListToggle
