@@ -21,3 +21,14 @@ func ($1 *$2Repository) Init(c *dig.Container) err {
   return err
 }
 endsnippet
+
+snippet newexp
+db, expect, err := gorm.NewDefaultExpecter()
+defer func() {
+	db.Close()
+}()
+
+if err != nil {
+	t.Fatal(err)
+}
+endsnippet

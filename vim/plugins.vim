@@ -6,6 +6,10 @@ colorscheme base16-material-dark
 let g:enable_bold_font = 1
 let g:enable_italic_font = 1
 
+command! -nargs=1 Silent
+\   execute <q-args>
+\ | execute 'redraw!'
+
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#neomake#enabled = 1
@@ -60,7 +64,8 @@ let g:neoterm_fixedsize=1
 
 " Go-specific
 function! GoTestCurrentFile()
-  call neoterm#do('cd %:p:h && go test -v -timeout 30s')
+  " call neoterm#do('cd %:p:h && go test -v -timeout 30s')
+  Silent GoTest
 endfunction
 
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
