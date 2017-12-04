@@ -39,5 +39,6 @@ autocmd FileType go nmap <buffer> <leader>T :GoTest -v<CR>
 autocmd FileType go nnoremap <silent> <leader>db :DlvToggleBreakpoint<CR>
 autocmd FileType go nnoremap <leader>dd :DlvDebug<CR>
 autocmd FileType go nnoremap <leader>dt :DlvTest<CR>
+autocmd FileType typescript nnoremap <silent> <leader>gd :TSDef<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-p> :FZF <C-R>= FindRootDirectory()<CR><CR>
