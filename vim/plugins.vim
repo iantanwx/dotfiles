@@ -53,6 +53,10 @@ let g:deoplete#auto_complete_start_length = 1
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif " close preview window after completion
 call deoplete#custom#source('_', 'converters', ['converter_remove_overlap', 'converter_truncate_abbr', 'converter_truncate_menu', 'converter_auto_delimiter', 'converter_auto_paren'])
 
+" Easymotion
+let g:EasyMotion_smartcase = 1
+let g:EasyMotion_startofline = 0
+
 " UltiSnips
 let g:UltiSnipsRemoveSelectModeMappings=1
 let g:UltiSnipsExpandTrigger="<tab>"

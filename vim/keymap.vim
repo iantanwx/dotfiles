@@ -34,6 +34,12 @@ function! s:cr_fn()
 endfunction
 inoremap <expr><BS> deoplete#smart_close_popup()."\<C-h>"
 
+" Easymotion
+" nnoremap <leader>l <Plug>(easymotion-lineforward)
+" nnoremap <leader>j <Plug>(easymotion-)
+" nnoremap <leader>k <Plug>(easymotion-k)
+" nnoremap <leader>h <Plug>(easymotion-linebackward)
+
 " Plugin-specific
 autocmd FileType go nmap <buffer> <leader>T :GoTest -v<CR>
 autocmd FileType go nnoremap <silent> <leader>db :DlvToggleBreakpoint<CR>
