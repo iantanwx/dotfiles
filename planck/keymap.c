@@ -3,8 +3,6 @@
 #ifdef AUDIO_ENABLE
 #include "audio.h"
 #endif
-#include "eeconfig.h"
-#include "keymap_plover.h"
 #include "version.h"
 
 extern keymap_config_t keymap_config;
@@ -85,7 +83,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     {LGUI(KC_GRV), KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  S(KC_3)},
     {_______,      KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______},
     {_______,      KC_MINS, KC_EQL,  KC_GRV,  KC_BSLS, KC_COLN, KC_NDSH, KC_MDSH, KC_COMM, KC_DOT,  KC_SLSH, _______},
-    {_______,      _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______}
+    {_______,      _______, _______, _______, _______, KC_BSPC, KC_BSPC, _______, _______, _______, _______, _______}
   },
 
   /* Symbol layer
