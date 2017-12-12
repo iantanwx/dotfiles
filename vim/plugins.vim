@@ -53,6 +53,9 @@ let g:deoplete#auto_complete_start_length = 1
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif " close preview window after completion
 call deoplete#custom#source('_', 'converters', ['converter_remove_overlap', 'converter_truncate_abbr', 'converter_truncate_menu', 'converter_auto_delimiter', 'converter_auto_paren'])
 
+" Echodoc
+let g:echodoc_enable_at_startup = 1
+
 " Easymotion
 let g:EasyMotion_smartcase = 1
 let g:EasyMotion_startofline = 0
@@ -96,6 +99,7 @@ let g:deoplete#sources#ternjs#filetypes = [
 								\ ]
 let g:tern#command = ["tern"]
 let g:tern#arguments = ["--persistent"]
+let g:nvim_typescript#type_info_on_hold = 1
 
 "Syntax:JavaScript/TypeScript
 autocmd FileType javascript JsPreTmpl html

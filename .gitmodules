@@ -28,9 +28,6 @@
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree
-[submodule "vim/bundle/nvim-typescript"]
-	path = vim/bundle/nvim-typescript
-	url = https://github.com/mhartington/nvim-typescript
 [submodule "vim/bundle/tern_for_vim"]
 	path = vim/bundle/tern_for_vim
 	url = https://github.com/ternjs/tern_for_vim
@@ -97,3 +94,6 @@
 [submodule "vim/bundle/auto-pairs"]
 	path = vim/bundle/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs
+[submodule "vim/bundle/echodoc.vim"]
+	path = vim/bundle/echodoc.vim
+	url = https://github.com/Shougo/echodoc.vim
