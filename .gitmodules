@@ -97,3 +97,9 @@
 [submodule "vim/bundle/echodoc.vim"]
 	path = vim/bundle/echodoc.vim
 	url = https://github.com/Shougo/echodoc.vim
+[submodule "vim/bundle/--force"]
+	path = vim/bundle/--force
+	url = https://github.com/mhartington/nvim-typescript
+[submodule "vim/bundle/nvim-typescript"]
+	path = vim/bundle/nvim-typescript
+	url = https://github.com/mhartington/nvim-typescript
