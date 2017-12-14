@@ -103,3 +103,9 @@
 [submodule "vim/bundle/nvim-typescript"]
 	path = vim/bundle/nvim-typescript
 	url = https://github.com/mhartington/nvim-typescript
+[submodule "vim/bundle/vim-tsx"]
+	path = vim/bundle/vim-tsx
+	url = https://github.com/ianks/vim-tsx
+[submodule "vim/bundle/vim-prettier"]
+	path = vim/bundle/vim-prettier
+	url = https://github.com/prettier/vim-prettier
