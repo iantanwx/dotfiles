@@ -52,9 +52,6 @@
 [submodule "vim/bundle/vim-go"]
 	path = vim/bundle/vim-go
 	url = https://github.com/fatih/vim-go
-[submodule "vim/bundle/vim-hybrid-material"]
-	path = vim/bundle/vim-hybrid-material
-	url = https://github.com/kristijanhusak/vim-hybrid-material
 [submodule "vim/bundle/vim-js-indent"]
 	path = vim/bundle/vim-js-indent
 	url = https://github.com/jason0x43/vim-js-indent
@@ -73,9 +70,6 @@
 [submodule "vim/bundle/yajs.vim"]
 	path = vim/bundle/yajs.vim
 	url = https://github.com/othree/yajs.vim
-[submodule "vim/bundle/yats.vim"]
-	path = vim/bundle/yats.vim
-	url = https://github.com/HerringtonDarkholme/yats.vim
 [submodule "vim/bundle/rooter.vim"]
 	path = vim/bundle/rooter.vim
 	url = https://github.com/airblade/vim-rooter
@@ -109,3 +103,6 @@
 [submodule "vim/bundle/vim-prettier"]
 	path = vim/bundle/vim-prettier
 	url = https://github.com/prettier/vim-prettier
+[submodule "vim/bundle/typescript-vim"]
+	path = vim/bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim

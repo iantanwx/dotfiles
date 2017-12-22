@@ -104,10 +104,6 @@ fpath=(
 # dedupe paths
 typeset -gU cdpath path fpath manpath
 
-# set colors
-BASE16_SHELL="$HOME/.dotfiles/base16/base16-material.dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-
 # ============================================================================
 # Modules
 # ============================================================================
