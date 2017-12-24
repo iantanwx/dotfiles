@@ -1,6 +1,3 @@
-[submodule "tmux/plugins/tpm"]
-	path = tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm
 [submodule "vim/bundle/deoplete-go"]
 	path = vim/bundle/deoplete-go
 	url = https://github.com/zchee/deoplete-go
