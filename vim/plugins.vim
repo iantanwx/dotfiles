@@ -27,6 +27,11 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#neomake#enabled = 1
 
+" Ack
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
 " FZF
 let g:fzf_command_prefix = 'FZF'
 let g:fzf_layout = { 'down': 16 }
