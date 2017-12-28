@@ -112,3 +112,4 @@
 [submodule "vim/bundle/vim-styled-components"]
 	path = vim/bundle/vim-styled-components
 	url = https://github.com/styled-components/vim-styled-components
+  branch = rewrite
