@@ -52,9 +52,6 @@
 [submodule "vim/bundle/vim-js-indent"]
 	path = vim/bundle/vim-js-indent
 	url = https://github.com/jason0x43/vim-js-indent
-[submodule "vim/bundle/vim-js-pretty-template"]
-	path = vim/bundle/vim-js-pretty-template
-	url = https://github.com/Quramy/vim-js-pretty-template
 [submodule "vim/bundle/vim-styled-jsx"]
 	path = vim/bundle/vim-styled-jsx
 	url = https://github.com/alampros/vim-styled-jsx
@@ -113,3 +110,6 @@
 	path = vim/bundle/vim-styled-components
 	url = https://github.com/styled-components/vim-styled-components
   branch = rewrite
+[submodule "vim/bundle/vim-graphql"]
+	path = vim/bundle/vim-graphql
+	url = https://github.com/jparise/vim-graphql
