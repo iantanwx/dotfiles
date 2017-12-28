@@ -119,7 +119,3 @@ let g:deoplete#sources#ternjs#filetypes = [
 let g:tern#command = ["tern"]
 let g:tern#arguments = ["--persistent"]
 let g:nvim_typescript#type_info_on_hold = 1
-
-"Syntax:JavaScript/TypeScript
-autocmd FileType javascript JsPreTmpl html
-autocmd FileType typescript JsPreTmpl html
