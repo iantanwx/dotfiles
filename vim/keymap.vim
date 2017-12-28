@@ -16,6 +16,10 @@ nnoremap <silent> <leader>th :call neoterm#close()<CR>
 nnoremap <silent> <leader>tc :call neoterm#clear()<CR>
 nnoremap <silent> <leader>tk :call neoterm#kill()<CR>
 
+" Lists
+let g:lt_location_list_toggle_map = '<leader><leader>l'
+let g:lt_quickfix_list_toggle_map = '<leader><leader>q'
+
 " vim-fugitive
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
@@ -35,10 +39,10 @@ endfunction
 inoremap <expr><BS> deoplete#smart_close_popup()."\<C-h>"
 
 " Easymotion
-" nnoremap <leader>l <Plug>(easymotion-lineforward)
-" nnoremap <leader>j <Plug>(easymotion-)
-" nnoremap <leader>k <Plug>(easymotion-k)
-" nnoremap <leader>h <Plug>(easymotion-linebackward)
+nnoremap <leader>l <Plug>(easymotion-lineforward)
+nnoremap <leader>j <Plug>(easymotion-j)
+nnoremap <leader>k <Plug>(easymotion-k)
+nnoremap <leader>h <Plug>(easymotion-linebackward)
 
 " Plugin-specific
 autocmd FileType go nmap <buffer> <leader>T :GoTest -v<CR>
