@@ -61,9 +61,6 @@
 [submodule "vim/bundle/vim-unimpaired"]
 	path = vim/bundle/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired
-[submodule "vim/bundle/rooter.vim"]
-	path = vim/bundle/rooter.vim
-	url = https://github.com/airblade/vim-rooter
 [submodule "vim/bundle/vim-bbye"]
 	path = vim/bundle/vim-bbye
 	url = https://github.com/moll/vim-bbye
