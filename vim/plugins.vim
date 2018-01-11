@@ -52,6 +52,7 @@ function! s:CloseIfOnlyNerdTreeLeft()
 endfunction
 
 let NERDTreeShowHidden = 1
+let NERDTreeChDirMode = 2
 
 " Neomake
 " Call neomake when a file is written to
