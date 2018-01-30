@@ -92,6 +92,12 @@ endif
 " no longer using \ so I can type escaped chars :/
 " needs to be before bundle so plugins map correctly
 let g:mapleader = "\<Space>"
+"
+" ----------------------------------------------------------------------------
+" FS
+" ----------------------------------------------------------------------------
+" Automatically switch working directory to the file's wd
+autocmd BufEnter * silent! lcd %:p:h
 
 " ----------------------------------------------------------------------------
 " Wild and file globbing stuff in command mode
@@ -244,14 +250,6 @@ set incsearch
 set wrapscan                          " Searches wrap around end of the file.
 set ignorecase
 set smartcase
-
-" ----------------------------------------------------------------------------
-" Special highlights
-" ----------------------------------------------------------------------------
-
-" Highlight VCS conflict markers
-" @see {@link https://bitbucket.org/sjl/dotfiles/src/83aac563abc9d0116894ac61db2c63c9a05f72be/vim/vimrc?at=default&fileviewer=file-view-default#vimrc-233}
-match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
 " ============================================================================
 " Security
