@@ -32,6 +32,10 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
+" vim-rooter
+" we don't want rooter changing directories automatically
+let g:rooter_manual_only = 1
+
 " FZF
 let g:fzf_command_prefix = 'FZF'
 let g:fzf_layout = { 'down': 16 }
@@ -52,7 +56,6 @@ function! s:CloseIfOnlyNerdTreeLeft()
 endfunction
 
 let NERDTreeShowHidden = 1
-let NERDTreeChDirMode = 2
 
 " Neomake
 " Call neomake when a file is written to

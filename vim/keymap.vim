@@ -55,4 +55,5 @@ autocmd FileType typescript nnoremap <silent> <leader>gh :TSDefPreview<CR>
 autocmd FileType typescript.tsx nnoremap <silent> <leader>gh :TSDefPreview<CR>
 nmap <silent> <leader>pd <Plug>(jsdoc)
 nnoremap <C-n> :NERDTreeToggle<CR>
-nnoremap <C-p> :FZFFiles <C-r>=FindRootDirectory()<CR><CR>
+nnoremap <silent> <C-p> :FZFFiles <C-r>=FindRootDirectory()<CR><CR>
+nnoremap <C-b> :FZFBuffers <CR>
