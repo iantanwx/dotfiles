@@ -44,16 +44,19 @@ inoremap <expr><BS> deoplete#smart_close_popup()."\<C-h>"
 " nnoremap <leader>k <Plug>(easymotion-k)
 " nnoremap <leader>h <Plug>(easymotion-linebackward)
 
-" Plugin-specific
+" Filetype-specific
+" Go
 autocmd FileType go nmap <buffer> <leader>T :GoTest -v<CR>
 autocmd FileType go nnoremap <silent> <leader>db :DlvToggleBreakpoint<CR>
 autocmd FileType go nnoremap <leader>dd :DlvDebug<CR>
 autocmd FileType go nnoremap <leader>dt :DlvTest<CR>
-autocmd FileType typescript nnoremap <silent> <leader>gd :TSDef<CR>
-autocmd FileType typescript.tsx nnoremap <silent> <leader>gd :TSDef<CR>
-autocmd FileType typescript nnoremap <silent> <leader>gh :TSDefPreview<CR>
-autocmd FileType typescript.tsx nnoremap <silent> <leader>gh :TSDefPreview<CR>
-nmap <silent> <leader>pd <Plug>(jsdoc)
+
+" TypeScript/JavaScript
+autocmd FileType typescript,typescript.tsx nnoremap <silent> <leader>gd :TSDef<CR>
+autocmd FileType typescript,typescript.tsx nnoremap <silent> <leader>gh :TSDefPreview<CR>
+autocmd FileType typescript,typescript.tsx,javascript nmap <silent> <leader>d <Plug>(jsdoc)
+
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <silent> <C-p> :FZFFiles <C-r>=FindRootDirectory()<CR><CR>
 nnoremap <C-b> :FZFBuffers <CR>
+nnoremap <C-a> :FZFAg <CR>
