@@ -1,5 +1,4 @@
 .git/
-build/
 compass-css/
 dist/
 node_modules/
