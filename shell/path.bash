@@ -53,6 +53,9 @@ PATH="${COMPOSER_HOME}/vendor/bin:${PATH}"
 # go -- prefer go binaries over composer; GOPATH is in shell/vars.bash
 PATH="${GOPATH}/bin:${PATH}"
 
+# rust crates
+PATH="${HOME}/.cargo/bin:${PATH}"
+
 PATH="${HOME}/.yarn/bin:${PATH}"
 
 # ----------------------------------------------------------------------------

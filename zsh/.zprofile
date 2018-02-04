@@ -4,3 +4,5 @@
 
 export DKO_SOURCE="${DKO_SOURCE} -> zsh/.zprofile"
 
+
+export PATH="$HOME/.cargo/bin:$PATH"

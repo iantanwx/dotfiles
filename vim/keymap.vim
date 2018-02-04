@@ -56,6 +56,10 @@ autocmd FileType typescript,typescript.tsx nnoremap <silent> <leader>gd :TSDef<C
 autocmd FileType typescript,typescript.tsx nnoremap <silent> <leader>gh :TSDefPreview<CR>
 autocmd FileType typescript,typescript.tsx,javascript nmap <silent> <leader>d <Plug>(jsdoc)
 
+" Rust
+autocmd FileType rust nnoremap <leader>gd <Plug>(rust-def)
+autocmd FileType rust nnoremap <leader>gh <Plug>(rust-def-split)
+
 nnoremap <C-n> :NERDTreeToggle <C-r>=FindRootDirectory()<CR><CR>
 nnoremap <silent> <C-p> :FZFFiles <C-r>=FindRootDirectory()<CR><CR>
 nnoremap <C-b> :FZFBuffers <CR>

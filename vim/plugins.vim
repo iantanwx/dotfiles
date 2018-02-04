@@ -115,6 +115,13 @@ augroup golang
   autocmd BufWritePost *.go call GoTestCurrentFile()
 augroup END
 
+" Rust-specific
+augroup rust
+  set hidden
+  let g:racer_cmd = "~/.cargo/bin/racer"
+  let g:racer_experimental_completer = 1
+augroup END
+
 " TS/JS-specific
 let g:deoplete#sources#ternjs#filetypes = [
 								\ 'js',

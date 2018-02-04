@@ -10,3 +10,5 @@ export DKO_SOURCE="${DKO_SOURCE} -> .bash_profile {"
 [ -f "${HOME}/.bashrc" ] && source "${HOME}/.bashrc"
 export DKO_SOURCE="${DKO_SOURCE} }"
 # vim: ft=sh :
+
+export PATH="$HOME/.cargo/bin:$PATH"

@@ -156,6 +156,9 @@ export WEECHAT_HOME="${DOTFILES}/weechat"
 # wp cli
 export WP_CLI_CONFIG_PATH="${XDG_CONFIG_HOME}/wp-cli"
 
+# rust
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+
 # X11 - for starting via xinit or startx
 export XINITRC="${DOTFILES}/linux/.xinitrc"
 export XAPPLRESDIR="${DOTFILES}/linux"
