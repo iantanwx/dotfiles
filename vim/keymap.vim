@@ -56,7 +56,7 @@ autocmd FileType typescript,typescript.tsx nnoremap <silent> <leader>gd :TSDef<C
 autocmd FileType typescript,typescript.tsx nnoremap <silent> <leader>gh :TSDefPreview<CR>
 autocmd FileType typescript,typescript.tsx,javascript nmap <silent> <leader>d <Plug>(jsdoc)
 
-nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeToggle <C-r>=FindRootDirectory()<CR><CR>
 nnoremap <silent> <C-p> :FZFFiles <C-r>=FindRootDirectory()<CR><CR>
 nnoremap <C-b> :FZFBuffers <CR>
 nnoremap <C-a> :FZFAg <CR>
