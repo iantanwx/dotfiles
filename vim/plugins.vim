@@ -65,7 +65,7 @@ let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign'}
 let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
 
 let g:neomake_go_enabled_makers = ['golint', 'govet', 'gometalinter']
-let g:neomake_open_list = 2
+let g:neomake_open_list = 0
 
 call neomake#configure#automake('w', 500)
 
