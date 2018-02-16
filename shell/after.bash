@@ -5,6 +5,8 @@
 
 export DKO_SOURCE="${DKO_SOURCE} -> shell/after.bash {"
 
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+
 # ============================================================================
 # fzf
 # ============================================================================

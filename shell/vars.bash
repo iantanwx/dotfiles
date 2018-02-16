@@ -128,10 +128,6 @@ export MYSQL_HISTFILE="${XDG_CACHE_HOME}/mysql_histfile"
 # neovim
 #export NVIM_PYTHON_LOG_FILE="${DOTFILES}/logs/nvim_python.log"
 
-# php moved to shell/php loaded in shell/before
-
-# python moved to shell/python loaded in shell/before
-
 # R
 export R_ENVIRON_USER="${DOTFILES}/r/.Renviron"
 export R_LIBS_USER="${HOME}/.local/lib/R/library/"
@@ -155,9 +151,6 @@ export WEECHAT_HOME="${DOTFILES}/weechat"
 
 # wp cli
 export WP_CLI_CONFIG_PATH="${XDG_CONFIG_HOME}/wp-cli"
-
-# rust
-export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 # X11 - for starting via xinit or startx
 export XINITRC="${DOTFILES}/linux/.xinitrc"
