@@ -61,6 +61,15 @@ set splitbelow
 set splitright
 
 " ------------------------------------
+" QF/Loclist
+" ------------------------------------
+augroup File-Type
+  autocmd!
+  autocmd FileType qf setlocal wrap
+  autocmd FileType qf wincmd J
+augroup END
+
+" ------------------------------------
 " Tab line
 " ------------------------------------
 
@@ -175,6 +184,7 @@ set fillchars+=diff:⣿
 set diffopt=vertical                  " Use in vertical diff mode
 set diffopt+=filler                   " blank lines to keep sides aligned
 set diffopt+=iwhite                   " Ignore whitespace changes
+
 
 " ----------------------------------------------------------------------------
 " Input auto-formatting (global defaults)

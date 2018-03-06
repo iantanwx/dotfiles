@@ -67,7 +67,11 @@ let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
 let g:neomake_go_enabled_makers = ['golint', 'govet', 'gometalinter']
 let g:neomake_open_list = 0
 
-call neomake#configure#automake('w', 500)
+
+call neomake#configure#automake({
+\ 'BufWinEnter': {'delay': 0},
+\ 'BufWritePost': {'delay': 0},
+\ })
 
 "Deoplete
 let g:deoplete#enable_at_startup = 1
