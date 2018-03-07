@@ -13,9 +13,6 @@
 [submodule "vim/bundle/fzf"]
 	path = vim/bundle/fzf
 	url = https://github.com/junegunn/fzf
-[submodule "vim/bundle/neomake"]
-	path = vim/bundle/neomake
-	url = https://github.com/neomake/neomake
 [submodule "vim/bundle/neopairs.vim"]
 	path = vim/bundle/neopairs.vim
 	url = https://github.com/Shougo/neopairs.vim
