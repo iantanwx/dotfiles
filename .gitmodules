@@ -122,3 +122,6 @@
 [submodule "vim/bundle/vim-racer"]
 	path = vim/bundle/vim-racer
 	url = https://github.com/racer-rust/vim-racer
+[submodule "vim/bundle/neomake"]
+	path = vim/bundle/neomake
+	url = https://github.com/neomake/neomake
