@@ -60,6 +60,8 @@ set synmaxcol=512                     " don't syntax highlight long lines
 set splitbelow
 set splitright
 
+set previewheight=30
+
 " ------------------------------------
 " QF/Loclist
 " ------------------------------------

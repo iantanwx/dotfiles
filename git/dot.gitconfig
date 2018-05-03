@@ -105,12 +105,6 @@
 	ui          = auto
 	pager       = true
 
-[color "diff-highlight"]
-	oldNormal    = red bold
-	oldHighlight = red bold 52
-	newNormal    = green bold
-	newHighlight = green bold 22
-
 # ============================================================================
 # URL aliases
 # ============================================================================
@@ -122,8 +116,8 @@
 
 [url "git://github.com/"]
 	insteadOf = "github:"
-[url "git@gist.github.com:"]
 
+[url "git@gist.github.com:"]
 	insteadOf = "gst:"
 	pushInsteadOf = "gist:"
 	pushInsteadOf = "git://gist.github.com/"
@@ -139,17 +133,14 @@
 # ============================================================================
 
 [commit]
-	gpgsign = false
+	template = "~/.dotfiles/git/commit-template"
 
 [core]
 	compression = -1
 # editor = "vim -f" ; removed so git will use env EDITOR or VISUAL
 	sharedRepository = 0664
+	commentchar = "#"
 # pager = less -x4 ; removed so git will use the env GIT_PAGER
-
-[diff]
-	compactionHeuristic = true
-	renames = true
 
 [filter "media"]
 	clean     = git media clean %f
