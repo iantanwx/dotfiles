@@ -128,3 +128,6 @@
 [submodule "vim/bundle/vim-solidity"]
 	path = vim/bundle/vim-solidity
 	url = https://github.com/tomlion/vim-solidity
+[submodule "vim/bundle/vim-yaml-folds"]
+	path = vim/bundle/vim-yaml-folds
+	url = https://github.com/pedrohdz/vim-yaml-folds
