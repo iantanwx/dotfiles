@@ -113,9 +113,6 @@
 [submodule "vim/bundle/vim-rhubarb"]
 	path = vim/bundle/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb
-[submodule "vim/bundle/vim-rooter"]
-	path = vim/bundle/vim-rooter
-	url = https://github.com/airblade/vim-rooter
 [submodule "vim/bundle/rust.vim"]
 	path = vim/bundle/rust.vim
 	url = https://github.com/rust-lang/rust.vim
@@ -134,3 +131,6 @@
 [submodule "vim/bundle/vim-protobuf"]
 	path = vim/bundle/vim-protobuf
 	url = https://github.com/uarun/vim-protobuf
+[submodule "vim/bundle/vim-rooter"]
+	path = vim/bundle/vim-rooter
+	url = https://github.com/airblade/vim-rooter
