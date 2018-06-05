@@ -131,3 +131,6 @@
 [submodule "vim/bundle/vim-yaml-folds"]
 	path = vim/bundle/vim-yaml-folds
 	url = https://github.com/pedrohdz/vim-yaml-folds
+[submodule "vim/bundle/vim-protobuf"]
+	path = vim/bundle/vim-protobuf
+	url = https://github.com/uarun/vim-protobuf
