@@ -134,3 +134,6 @@
 [submodule "vim/bundle/vim-rooter"]
 	path = vim/bundle/vim-rooter
 	url = https://github.com/airblade/vim-rooter
+[submodule "vim/bundle/rooter.vim"]
+	path = vim/bundle/rooter.vim
+	url = https://github.com/airblade/vim-rooter
