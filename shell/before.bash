@@ -28,5 +28,6 @@ export DKO_SOURCE="${DKO_SOURCE} -> shell/before.bash {"
 . "${DOTFILES}/shell/php.bash"
 . "${DOTFILES}/shell/python.bash"
 . "${DOTFILES}/shell/ruby.bash"
+. "${DOTFILES}/shell/ocaml.bash"
 
 export DKO_SOURCE="${DKO_SOURCE} }"
