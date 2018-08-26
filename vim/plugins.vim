@@ -135,3 +135,7 @@ let g:tern#command = ["tern"]
 let g:tern#arguments = ["--persistent"]
 let g:nvim_typescript#type_info_on_hold = 1
 let g:jsdoc_enable_es6 = 1
+
+" OCaml-specific
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
