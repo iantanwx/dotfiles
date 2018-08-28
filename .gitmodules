@@ -73,9 +73,6 @@
 [submodule "vim/bundle/echodoc.vim"]
 	path = vim/bundle/echodoc.vim
 	url = https://github.com/Shougo/echodoc.vim
-[submodule "vim/bundle/--force"]
-	path = vim/bundle/--force
-	url = https://github.com/mhartington/nvim-typescript
 [submodule "vim/bundle/nvim-typescript"]
 	path = vim/bundle/nvim-typescript
 	url = https://github.com/mhartington/nvim-typescript
@@ -88,10 +85,6 @@
 [submodule "vim/bundle/onedark.vim"]
 	path = vim/bundle/onedark.vim
 	url = https://github.com/joshdick/onedark.vim
-[submodule "vim/bundle/vim-styled-components"]
-	path = vim/bundle/vim-styled-components
-	url = https://github.com/styled-components/vim-styled-components
-  branch = rewrite
 [submodule "vim/bundle/vim-graphql"]
 	path = vim/bundle/vim-graphql
 	url = https://github.com/jparise/vim-graphql
@@ -134,3 +127,6 @@
 [submodule "vim/bundle/yats.vim"]
 	path = vim/bundle/yats.vim
 	url = https://github.com/herringtondarkholme/yats.vim
+[submodule "tmux/plugins/tpm"]
+	path = tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
