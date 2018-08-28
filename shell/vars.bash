@@ -89,15 +89,6 @@ export COMPOSER_CACHE_DIR="${XDG_CACHE_HOME}/composer"
 # docker
 export DOCKER_CONFIG="${XDG_CONFIG_HOME}/docker"
 
-# go
-# used in shell/paths
-if [ -d "${HOME}/Development/go" ]; then
-  export GOPATH="${HOME}/Development/go"
-else
-  export GOPATH="${HOME}/Projects/go"
-fi
-
-
 # homebrew
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_INSECURE_REDIRECT=1
@@ -127,6 +118,7 @@ export MYSQL_HISTFILE="${XDG_CACHE_HOME}/mysql_histfile"
 
 # neovim
 #export NVIM_PYTHON_LOG_FILE="${DOTFILES}/logs/nvim_python.log"
+export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
 
 # R
 export R_ENVIRON_USER="${DOTFILES}/r/.Renviron"
