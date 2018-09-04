@@ -31,14 +31,15 @@ endif
 " ----------------------------------------------------------------------------
 syntax on
 
+set t_ut=
+set termguicolors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-set termguicolors
+let g:material_theme_style = 'palenight'
+let g:material_terminal_italics = 1
 
 set background=dark
 colorscheme material
-let g:material_theme_style = 'palenight'
-let g:material_terminal_italics = 1
 
 " ----------------------------------------------------------------------------
 " Display
