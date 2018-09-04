@@ -27,6 +27,20 @@ if empty($SSH_CONNECTION) && has('clipboard')
 endif
 
 " ----------------------------------------------------------------------------
+" Colours
+" ----------------------------------------------------------------------------
+syntax on
+
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+set termguicolors
+
+set background=dark
+colorscheme material
+let g:material_theme_style = 'palenight'
+let g:material_terminal_italics = 1
+
+" ----------------------------------------------------------------------------
 " Display
 " ----------------------------------------------------------------------------
 

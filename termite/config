@@ -14,7 +14,7 @@ dynamic_title           = true
 font = Monospace 9
 font = DejaVu Sans Mono 9
 font = Fira Mono 10
-font = Fira Mono For Powerline 10
+font = Fira Mono For Powerline 12
 
 fullscreen              = false
 geometry                = 144x52+800-50
@@ -28,40 +28,52 @@ search_wrap             = true
 size_hints              = true
 urgent_on_bell          = true
 
-
 [colors]
-# Base16 Twilight
-# Scheme: David Hart (http://hart-dev.com)
+# Base16 Material Palenight
+# Author: Nate Peterson
 
-foreground      = #a7a7a7
-foreground_bold = #a7a7a7
-cursor          = #a7a7a7
-background      = #1e1e1e
+foreground          = #959DCB
+foreground_bold     = #959DCB
+cursor              = #959DCB
+cursor_foreground   = #292D3E
+background          = rgba(41, 45, 62)
 
 # 16 color space
-color0  = #1e1e1e
-color1  = #cf6a4c
-color2  = #8f9d6a
-color3  = #f9ee98
-color4  = #7587a6
-color5  = #9b859d
-color6  = #afc4db
-color7  = #a7a7a7
-color8  = #5f5a60
-color9  = #cf6a4c
-color10 = #8f9d6a
-color11 = #f9ee98
-color12 = #7587a6
-color13 = #9b859d
-color14 = #afc4db
-color15 = #ffffff
 
-# 256 color space
-color16 = #cda869
-color17 = #9b703f
-color18 = #323537
-color19 = #464b50
-color20 = #838184
-color21 = #c3c3c3
+# Black, Gray, Silver, White
+color0  = #292D3E
+color8  = #676E95
+color7  = #959DCB
+color15 = #FFFFFF
 
-# vim: ft=dosini cms=#%s
+# Red
+color1  = #F07178
+color9  = #F07178
+
+# Green
+color2  = #C3E88D
+color10 = #C3E88D
+
+# Yellow
+color3  = #FFCB6B
+color11 = #FFCB6B
+
+# Blue
+color4  = #82AAFF
+color12 = #82AAFF
+
+# Purple
+color5  = #C792EA
+color13 = #C792EA
+
+# Teal
+color6  = #89DDFF
+color14 = #89DDFF
+
+# Extra colors
+color16 = #F78C6C
+color17 = #FF5370
+color18 = #444267
+color19 = #32374D
+color20 = #8796B0
+color21 = #959DCB

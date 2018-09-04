@@ -130,3 +130,6 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "vim/bundle/material.vim"]
+	path = vim/bundle/material.vim
+	url = https://github.com/kaicataldo/material.vim
