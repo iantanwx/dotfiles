@@ -48,16 +48,6 @@ dko::has "nvm" && {
   __dko_prompt_right_colors+=('$( [ "${(e)$(nvm_ls current 2>/dev/null)}" = "$DKO_DEFAULT_NODE_VERSION" ] && echo "%F{blue}" || echo "%F{red}")')
   __dko_prompt_right_parts+=('${$(nvm_ls current 2>/dev/null):-?}')
 }
-# dko::has "pyenv" && {
-#   [ -n ${#__dko_prompt_right_parts} ] && {
-#     __dko_prompt_right_colors+=('%F{blue}')
-#     __dko_prompt_right_parts+=('|')
-#   }
-#   __dko_prompt_right_colors+=('%F{blue}')
-#   __dko_prompt_right_parts+=('py:')
-#   __dko_prompt_right_colors+=('%F{blue}')
-#   __dko_prompt_right_parts+=('${$(pyenv version-name 2>/dev/null):-sys}')
-# }
 
 dko::has "go" && {
   [ -n ${#__dko_prompt_right_parts} ] && {
@@ -67,7 +57,7 @@ dko::has "go" && {
   __dko_prompt_right_colors+=('%F{blue}')
   __dko_prompt_right_parts+=('go:')
   __dko_prompt_right_colors+=('%F{blue}')
-  __dko_prompt_right_parts+=('v${$(go version | grep -o "\([0-9]\.\)\{2\}[0-9]" 2>/dev/null):-sys}')
+  __dko_prompt_right_parts+=('v${$(go version | grep -Po "(?<=go)(1\.[0-9]{1,2})" 2>/dev/null):-sys}')
 }
 
 # ============================================================================
