@@ -9,9 +9,67 @@ scriptencoding utf-8
 " ██╗╚████╔╝  ██║ ██║ ╚═╝ ██║ ██║  ██║ ╚██████╗
 " ╚═╝ ╚═══╝   ╚═╝ ╚═╝     ╚═╝ ╚═╝  ╚═╝  ╚═════╝
 "
+" Set up critical directories
+let g:my#vim_dir = fnamemodify(resolve(expand('$MYVIMRC')), ':p:h')
+let g:my#plug_dir = '/vendor/'
+let g:my#plug_absdir = g:my#vim_dir . g:my#plug_dir
 
-" Pathogen
-execute pathogen#infect()
+" Install vim-plug
+if empty(glob(expand(g:my#vim_dir . '/autoload/plug.vim')))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" ----------------------------------------------------------------------------
+" Plugins
+" ----------------------------------------------------------------------------
+call plug#begin(g:my#plug_absdir)
+
+Plug 'mileszs/ack.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'shougo/echodoc'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'valloric/ListToggle'
+Plug 'kaicataldo/material.vim'
+Plug 'neomake/neomake'
+Plug 'shougo/neopairs'
+Plug 'kassio/neoterm'
+Plug 'scrooloose/nerdtree'
+Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'airblade/vim-rooter'
+Plug 'rust-lang/rust.vim'
+Plug 'ternjs/tern_for_vim'
+Plug 'SirVer/ultisnips'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'moll/vim-bbye'
+Plug 'tpope/vim-commentary'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'sebdah/vim-delve'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-fugitive'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'jparise/vim-graphql'
+Plug 'pangloss/vim-javascript'
+Plug 'heavenshell/vim-jsdoc'
+Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'uarun/vim-protobuf'
+Plug 'racer-rust/vim-racer'
+Plug 'tpope/vim-rhubarb'
+Plug 'tomlion/vim-solidity'
+Plug 'styled-components/vim-styled-components'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'pedrohdz/vim-yaml-folds'
+
+call plug#end()
 
 " ----------------------------------------------------------------------------
 " Clipboard -- use os clipboard
