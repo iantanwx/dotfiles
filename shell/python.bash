@@ -26,6 +26,9 @@ dko::has "pyenv-virtualenv-init" && eval "$(pyenv virtualenv-init -)"
 # ==============================================================================
 # VirtualEnv for python package isolation
 # ==============================================================================
+if [[ -n $VIRTUAL_ENV && -e "${VIRTUAL_ENV}/bin/activate" ]]; then
+  source "${VIRTUAL_ENV}/bin/activate"
+fi
 
 # Default virtualenv
 export WORKON_HOME="${HOME}/.local/virtualenv"

@@ -50,9 +50,6 @@ PATH="/usr/local/bin:/usr/local/sbin:${DKO_SYSTEM_PATH}"
 # composer; COMPOSER_HOME is in shell/vars.bash
 PATH="${COMPOSER_HOME}/vendor/bin:${PATH}"
 
-# go -- prefer go binaries over composer; GOPATH is in shell/vars.bash
-PATH="${GOPATH}/bin:${PATH}"
-
 # rust crates
 PATH="${HOME}/.cargo/bin:${PATH}"
 
