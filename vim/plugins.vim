@@ -110,12 +110,6 @@ augroup END
 
 " OCaml-specific
 " Merlin setup
-" if executable('ocamlmerlin') && has('python')
-"   let s:ocamlmerlin = substitute(system('opam config var share'), '\n$', '', '''') . "/merlin"
-"   execute "set rtp+=" . s:ocamlmerlin . "/vim"
-"   execute "set rtp+=" . s:ocamlmerlin . "/vimbufsync"
-" endif
-
 if executable('ocp-index')
   let s:ocpindex = substitute(system('opam config var share'), '\n$', '', '''') . "/ocp-index"
   execute "set rtp+=" . s:ocpindex . "/vim"

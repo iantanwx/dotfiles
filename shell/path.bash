@@ -53,6 +53,7 @@ PATH="${COMPOSER_HOME}/vendor/bin:${PATH}"
 # rust crates
 PATH="${HOME}/.cargo/bin:${PATH}"
 
+# npm packages
 PATH="${HOME}/.yarn/bin:${PATH}"
 
 # ----------------------------------------------------------------------------
