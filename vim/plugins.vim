@@ -58,7 +58,6 @@ call neomake#configure#automake({
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
 let g:deoplete#auto_complete_start_length = 1
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif " close preview window after completion
 call deoplete#custom#source('_', 'converters', ['converter_remove_overlap', 'converter_truncate_abbr', 'converter_truncate_menu', 'converter_auto_delimiter', 'converter_auto_paren'])
 
 " Echodoc
