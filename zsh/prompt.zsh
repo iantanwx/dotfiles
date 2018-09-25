@@ -57,7 +57,7 @@ dko::has "go" && {
   __dko_prompt_right_colors+=('%F{blue}')
   __dko_prompt_right_parts+=('go:')
   __dko_prompt_right_colors+=('%F{blue}')
-  __dko_prompt_right_parts+=('v${$(go version | grep -Po "(?<=go)(1\.[0-9]{1,2})" 2>/dev/null):-sys}')
+  __dko_prompt_right_parts+=('v${$(go version | grep -o "1.[0-9]\{1,2\}" 2>/dev/null):-sys}')
 }
 
 # ============================================================================
