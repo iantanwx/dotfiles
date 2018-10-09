@@ -21,16 +21,6 @@ __install() {
   dko::status "Installing latest NPM"
   npm install --global --production npm@latest
 
-  dko::status "Installing Yeoman"
-  npm install --global --production yo
-
-  dko::status "Checking npm environment using yo doctor"
-  yo doctor || exit 1
-
-  dko::status "Installing global node packages"
-  # peer dep packages
-  npm install --global --production eslint
-
   # loop through packages.txt file and install each one
   while read -r package; do
     if [ "$package" != "yo" ] \
