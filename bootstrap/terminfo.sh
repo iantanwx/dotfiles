@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #
 # Copy compiled terminfo files
-#
 
 # errors are okay.
 #set -eu

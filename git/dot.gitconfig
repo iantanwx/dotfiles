@@ -166,8 +166,8 @@
 # ============================================================================
 
 [gui]
-	fontui = -family \"Fira Sans\" -size -10 -weight normal -slant roman -underline 0 -overstrike 0
-	fontdiff = -family \"Fira Mono for Powerline\" -size -10 -weight normal -slant roman -underline 0 -overstrike 0
+	fontui = -family \"Fira Code\" -size -10 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family \"Fira Code\" -size -10 -weight normal -slant roman -underline 0 -overstrike 0
 	commitmsgwidth = 80
 	diffcontext = 10
 

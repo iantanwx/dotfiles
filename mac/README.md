@@ -1,16 +1,7 @@
 # macOS/OS X
 
-## Full generic setup, in order
-
-If there is user data on encrypted volumes other than the boot volume, they
-will not be mounted until a user has logged in. To remedy this, see
-[https://github.com/davidosomething/Unlock](jridgewell/Unlock) (forked to my
-GitHub for archival).
-
 ### Install App Store apps
 
-- `Amphetamine` - better than caffeine
-- `Display Menu` - for setting native resolutions on monitors
 - `xcode`
     - Then run `xcode-select --install` to prompt for CLI tools.
 
@@ -47,11 +38,6 @@ brew install zsh
 chsh -s /usr/local/bin/zsh
 ```
 
-### Install Powerline patched fonts from source
-
-1. `git clone https://github.com/powerline/fonts ~/src/fonts`
-1. Run `install.sh`
-
 ### Install iterm2 from brew
 
 1. Install `iterm2-beta`, which is technically iterm3:
@@ -64,35 +50,11 @@ chsh -s /usr/local/bin/zsh
    start app -> Preferences -> Load preferences from custom folder, point to
    existing plist exports.
 
-### Install macvim
-
-```bash
-u macvim
-```
-
-1. Launch `vim` and let `vim-plug` install itself
-
 ### Install neovim
 
 1. Follow <https://github.com/neovim/homebrew-neovim> for HEAD. `u neovim` can
    do this automatically.
 1. Launch `nvim` and let `vim-plug` install itself
-
-### Install keepassx from source
-
-Some of the requirements to `brew install` first:
-
-- cmake
-- libgcrypt
-- oath-toolkit
-
-Install keepassx 2.0 with http support from the source of this fork (inspect
-diff first):
-<https://github.com/eugenesan/keepassx/tree/2.0-http-totp>
-
-It is fine to run the `cmake -DCMAKE_BUILD_TYPE=Release` step until it builds
-successfully (it will tell you what deps are missing each time, and the deps
-can all be installed via brew).
 
 ### Install from brew
 
@@ -109,12 +71,6 @@ openssh already).
 - google-chrome
     - Login and sync google account for settings
     - Provides `authy`
-- dropbox
-    - Then setup keepassx to load the key database from dropbox
-- kaleidoscope
-    - Load license file
-- transmission
-    - Load blocklist `http://john.bitsurge.net/public/biglist.p2p.gz`
 
 Install the rest of the packages from
 [bootstrap/mac/cask.sh](../bootstrap/mac/cask.sh) as desired.
@@ -125,11 +81,6 @@ Make sure the other packages above are installed since after you start using
 `pyenv` it gets annoying to remember to switch back to system python for each
 `brew` operation.
 
-- Install `chruby`, `ruby-install`
-    1. `ruby-install ruby` to install latest
-    1. `chruby` to that version
-    1. Install gems using
-       [ruby/install-default-gems.sh](../ruby/install-default-gems.sh)
 - Install [nvm](https://github.com/creationix/nvm) MANUALLY via git clone into
   `$XDG_CONFIG_HOME`, then use it to install a version of `node` (and
   consequently `npm`)
@@ -151,10 +102,6 @@ Make sure the other packages above are installed since after you start using
   passphrase in keychain with minimal work)
     - Import keybase public/private keys into gpg using the pref pane.
     - Setup `local/gitconfig` to sign commits
-
-## Reduce desktop icon size
-
-Click desktop to focus Finder, `cmd-j` use smallest sizes for everything.
 
 ## Source order
 
