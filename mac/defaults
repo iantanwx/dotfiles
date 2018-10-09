@@ -20,9 +20,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # disable startup chime
 sudo nvram SystemAudioVolume=" "
 
-# disable power button sleep, hold down for power off menu
-defaults write com.apple.loginwindow PowerButtonSleepsSystem -bool no
-
 # ============================================================================
 # System preferences for hardware
 # ============================================================================
@@ -48,44 +45,12 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
-# ============================================================================
-# App preferences
-# ============================================================================
-
-# ----------------------------------------------------------------------------
-# Chrome
-# ----------------------------------------------------------------------------
-
-# Disable swipe to go back
-defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
-defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
-defaults write com.google.Chrome AppleEnableMouseSwipeNavigateWithScrolls -bool false
-defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls -bool false
-
-# ----------------------------------------------------------------------------
-# Dashboard
-# ----------------------------------------------------------------------------
-
-# Disable dashboard
-defaults write com.apple.dashboard mcx-disabled -boolean YES
-
-# Don’t show Dashboard as a Space
-defaults write com.apple.dock dashboard-in-overlay -bool true
-
 # ----------------------------------------------------------------------------
 # Finder
 # ----------------------------------------------------------------------------
 
 # Show the ~/Library folder
 chflags nohidden ~/Library
-
-# Disable window animations and Get Info animations in Finder
-# 2016-06-01 -- UNDONE because of the tiny finder window bug:
-# https://discussions.apple.com/message/25915421#message25915421
-#defaults write com.apple.finder DisableAllAnimations -bool false
-
-# Disable window animations
-defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 
 # Column view as default
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
@@ -175,19 +140,6 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 # ----------------------------------------------------------------------------
 
 defaults write com.apple.menuextra.clock DateFormat -string "E MMM d HH:mm"
-
-# ----------------------------------------------------------------------------
-# Messages
-# ----------------------------------------------------------------------------
-
-# NO FUCKING EMOJI
-defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false
-
-# Disable smart quotes as it’s annoying for messages that contain code
-defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
-
-# Disable continuous spell checking
-defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
 
 # ----------------------------------------------------------------------------
 # Photos
@@ -290,16 +242,6 @@ defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 # Don't ask to use every drive for Time Machine
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
-# ----------------------------------------------------------------------------
-# Transmission
-# ----------------------------------------------------------------------------
-
-defaults write org.m0k.transmission WarningDonate -bool false
-defaults write org.m0k.transmission WarningLegal -bool false
-defaults write org.m0k.transmission BlocklistURL -string "http://john.bitsurge.net/public/biglist.p2p.gz"
-defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
-defaults write org.m0k.transmission BlocklistNew -bool true
-
 # ============================================================================
 # Restart for changes
 # ============================================================================
@@ -308,13 +250,11 @@ defaults write org.m0k.transmission BlocklistNew -bool true
 for app in \
   Dashboard \
   Dock \
-  Dock \
   Finder \
   Mail \
   Safari \
   SystemUIServer \
   Terminal \
-  Twitter \
   ; do killall "$app" >/dev/null 2>&1; done
 
 # vim: ft=sh :
