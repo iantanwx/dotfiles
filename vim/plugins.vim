@@ -129,3 +129,7 @@ let g:jsdoc_enable_es6 = 1
 " OCaml-specific
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
 execute "set rtp+=" . g:opamshare . "/merlin/vim"
+
+" Markdown-specific
+let vim_markdown_preview_browser='Google Chrome'
+let vim_markdown_preview_github=1
