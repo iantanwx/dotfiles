@@ -69,6 +69,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'pedrohdz/vim-yaml-folds'
 Plug 'copy/deoplete-ocaml'
+Plug 'junegunn/vim-easy-align'
 
 call plug#end()
 

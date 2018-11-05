@@ -40,14 +40,14 @@ let NERDTreeShowHidden = 1
 
 " Neomake
 " Call neomake when a file is written to
-let g:neomake_error_sign   = {'text': '✖', 'texthl': 'NeomakeErrorSign'}
-let g:neomake_warning_sign = {'text': '∆', 'texthl': 'NeomakeWarningSign'}
-let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign'}
-let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
+" let g:neomake_error_sign   = {'text': '⚠', 'texthl': 'NeomakeErrorSign'}
+" let g:neomake_warning_sign = {'text': '∆', 'texthl': 'NeomakeWarningSign'}
+" let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign'}
+" let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
 
+let g:neomake_typescript_enabled_makers = ['tslint']
 let g:neomake_go_enabled_makers = ['golint', 'govet', 'gometalinter']
 let g:neomake_open_list = 0
-
 
 call neomake#configure#automake({
 \ 'BufWinEnter': {'delay': 0},
@@ -133,3 +133,5 @@ execute "set rtp+=" . g:opamshare . "/merlin/vim"
 " Markdown-specific
 let vim_markdown_preview_browser='Google Chrome'
 let vim_markdown_preview_github=1
+let vim_markdown_preview_hotkey='<C-m>'
+au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
