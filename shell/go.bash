@@ -15,8 +15,6 @@ fi
 # GOROOT
 if [[ "$OSTYPE" == "darwin" ]]; then
   export GOROOT="$(brew --prefix go@1.9)/libexec"
-elif [[ "$OSTYPE" == "linux-gnu" ]]; then
-  export GOROOT="/usr/local/go/libexec"
 fi
 
 # go -- prefer go binaries over composer; GOPATH is in shell/vars.bash
