@@ -130,6 +130,11 @@ let g:jsdoc_enable_es6 = 1
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
 execute "set rtp+=" . g:opamshare . "/merlin/vim"
 
+" C-specific
+autocmd BufEnter *.tpp :setlocal filetype=cpp
+let g:deoplete#sources#clang#libclang_path = "/usr/local/opt/llvm/lib/libclang.dylib"
+let g:deoplete#sources#clang#clang_header = "/usr/local/opt/llvm/lib/clang/"
+
 " Markdown-specific
 let vim_markdown_preview_browser='Google Chrome'
 let vim_markdown_preview_github=1

@@ -26,9 +26,16 @@ endif
 " ----------------------------------------------------------------------------
 call plug#begin(g:my#plug_absdir)
 
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'copy/deoplete-ocaml'
+Plug 'zchee/deoplete-clang'
+Plug 'Shougo/neoinclude.vim'
 Plug 'mileszs/ack.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'shougo/echodoc'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -38,10 +45,6 @@ Plug 'neomake/neomake'
 Plug 'shougo/neopairs.vim'
 Plug 'kassio/neoterm'
 Plug 'scrooloose/nerdtree'
-Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'airblade/vim-rooter'
 Plug 'rust-lang/rust.vim'
 Plug 'ternjs/tern_for_vim'
@@ -68,7 +71,6 @@ Plug 'styled-components/vim-styled-components'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'pedrohdz/vim-yaml-folds'
-Plug 'copy/deoplete-ocaml'
 Plug 'junegunn/vim-easy-align'
 
 call plug#end()
