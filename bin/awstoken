@@ -1,0 +1,38 @@
+#!/bin/bash
+function usage() {
+cat <<EOF
+Usage: $1 command [ARGS]
+Available commands:
+    refresh         refresh the AWS token
+EOF
+}
+
+function refresh() {
+  TOKEN_ARN="arn:aws:iam::648273915458:mfa/ian"
+  TOKEN_CODE=$1
+
+  token=$(aws sts get-session-token --token-code $TOKEN_CODE --serial-number $TOKEN_ARN)
+  echo $token | jq --raw-output '.Credentials | @text "aws_access_key_id = \(.AccessKeyId)\naws_secret_access_key = \(.SecretAccessKey)\naws_session_token = \(.SessionToken)"'
+
+  return 0;
+}
+
+case "$1" in
+  refresh)
+    arg=$2
+    val=$3
+    case "$arg" in
+      "--token-code")
+        echo "Using $val as token code."
+        refresh $val
+      ;;
+      *)
+        echo "Usage: $0 --token-code something"
+      ;;
+    esac
+  ;;
+  *)
+  usage "$0"
+  exit 1
+  ;;
+esac
