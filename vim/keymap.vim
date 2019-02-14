@@ -64,3 +64,6 @@ nnoremap <C-n> :NERDTreeToggle <C-r>=FindRootDirectory()<CR><CR>
 nnoremap <silent> <C-p> :FZFFiles <C-r>=FindRootDirectory()<CR><CR>
 nnoremap <C-b> :FZFBuffers <CR>
 nnoremap <C-a> :FZFAg <CR>
+
+" Python
+autocmd FileType python nnoremap <leader>p :call Autopep8()<CR>

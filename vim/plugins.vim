@@ -135,6 +135,11 @@ autocmd BufEnter *.tpp :setlocal filetype=cpp
 let g:deoplete#sources#clang#libclang_path = "/usr/local/opt/llvm/lib/libclang.dylib"
 let g:deoplete#sources#clang#clang_header = "/usr/local/opt/llvm/lib/clang/"
 
+" Python-specific
+let g:deoplete#sources#jedi#show_docstring = 1
+let g:python_highlight_all = 1
+let g:autopep8_on_save = 0
+
 " Markdown-specific
 let vim_markdown_preview_browser='Google Chrome'
 let vim_markdown_preview_github=1
