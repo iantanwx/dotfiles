@@ -4,14 +4,14 @@
 # ==============================================================================
 
 # REQUIRED <HEADER> <type>(scope): lowercase present tense subject no period
-#feat(pencil): add 'graphiteWidth' option
-#fix(graphite): stop graphite breaking when width < 0.1
-#perf(pencil): remove graphiteWidth option
-#docs()
-#chore()
-#refactor()
-#test()
-#revert: feat(pencil): add 'graphiteWidth' option
+#feat():
+#fix():
+#perf():
+#docs():
+#style():
+#chore():
+#refactor():
+#test():
 
 # OPTIONAL <BODY> present tense body
 
