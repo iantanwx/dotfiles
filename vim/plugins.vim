@@ -40,13 +40,13 @@ let NERDTreeShowHidden = 1
 
 " Neomake
 " Call neomake when a file is written to
-" let g:neomake_error_sign   = {'text': '⚠', 'texthl': 'NeomakeErrorSign'}
-" let g:neomake_warning_sign = {'text': '∆', 'texthl': 'NeomakeWarningSign'}
-" let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign'}
-" let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
+let g:neomake_error_sign   = {'text': '⚠', 'texthl': 'NeomakeErrorSign'}
+let g:neomake_warning_sign = {'text': '∆', 'texthl': 'NeomakeWarningSign'}
+let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign'}
+let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
 
 let g:neomake_typescript_enabled_makers = ['tslint']
-let g:neomake_go_enabled_makers = ['golint', 'govet', 'gometalinter']
+let g:neomake_go_enabled_makers = ['golint']
 let g:neomake_open_list = 0
 
 call neomake#configure#automake({
@@ -82,7 +82,7 @@ function! GoTestCurrentFile()
   Silent GoTest
 endfunction
 
-let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode-gomod'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 " let g:deoplete#sources#go#source_importer = 1
 let g:delve_backend = "native"
