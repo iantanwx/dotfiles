@@ -4,6 +4,7 @@ export DKO_SOURCE="${DKO_SOURCE} -> shell/go.bash {"
 # ==============================================================================
 # go
 # ==============================================================================
+dko::source "${HOME}/.gvm/scripts/gvm"
 
 # GOPATH
 if [ -d "${HOME}/Development/go" ]; then
