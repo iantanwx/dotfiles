@@ -28,7 +28,6 @@ call plug#begin(g:my#plug_absdir)
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'zchee/deoplete-jedi'
 Plug 'copy/deoplete-ocaml'
 Plug 'zchee/deoplete-clang'
@@ -68,7 +67,6 @@ Plug 'uarun/vim-protobuf'
 Plug 'racer-rust/vim-racer'
 Plug 'tpope/vim-rhubarb'
 Plug 'tomlion/vim-solidity'
-Plug 'styled-components/vim-styled-components'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'Vimjas/vim-python-pep8-indent'

@@ -82,18 +82,15 @@ function! GoTestCurrentFile()
   Silent GoTest
 endfunction
 
-let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode-gomod'
-let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
-" let g:deoplete#sources#go#source_importer = 1
+call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 let g:delve_backend = "native"
 let g:go_highlight_structs = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 1
-set updatetime=100 " this sets go type info to show almost instantaneously
+
 " automatically run tests for related package
 augroup golang
   autocmd!
