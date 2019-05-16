@@ -90,6 +90,7 @@ let g:go_highlight_functions = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_auto_type_info = 1
+let g:go_updatetime = 300
 
 " automatically run tests for related package
 augroup golang
