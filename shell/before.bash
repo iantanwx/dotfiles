@@ -28,6 +28,7 @@ export DKO_SOURCE="${DKO_SOURCE} -> shell/before.bash {"
 . "${DOTFILES}/shell/node.bash"
 . "${DOTFILES}/shell/python.bash"
 . "${DOTFILES}/shell/ruby.bash"
+. "${DOTFILES}/shell/rust.bash"
 . "${DOTFILES}/shell/ocaml.bash"
 # do not source C/C++ custom settings for now
 # . "${DOTFILES}/shell/llvm.bash"
