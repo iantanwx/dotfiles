@@ -25,9 +25,13 @@ shift + alt - l : chunkc tiling::window --warp east
 
 alt - r : chunkc tiling::desktop --rotate 90
 
-# change focused workspace
-ctrl + alt - p : chunkc tiling::monitor -f prev
-ctrl + alt - n : chunkc tiling::monitor -f next
+# change focused desktop
+ctrl - left : chunkc tiling::desktop -f prev
+ctrl - right : chunkc tiling::desktop -f next
+
+# change focused monitor
+alt - left : chunkc tiling::monitor -f prev
+alt - right : chunkc tiling::monitor -f next
 
 # move focused container to workspace
 shift + alt - m : chunkc tiling::window --send-to-desktop $(chunkc get _last_active_desktop)
