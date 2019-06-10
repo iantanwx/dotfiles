@@ -46,8 +46,8 @@ __symlink() {
 
   case "$OSTYPE" in
     darwin*)
-      dko::symlink subversion/config            .subversion/config
-      dko::symlink mac/dot.hushlogin            .hushlogin
+      dko::symlink chunkwm/dot.chunkwmrc        .chunkwmrc
+      dko::symlink chunkwm/dot.skhdrc           .skhdrc
       ;;
     linux*)
       dko::symlink linux/subversion/config      .subversion/config
