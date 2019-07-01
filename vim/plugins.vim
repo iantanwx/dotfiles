@@ -3,7 +3,7 @@ command! -nargs=1 Silent
 \ | execute 'redraw!'
 
 " Airline
-let g:airline_theme = 'material'
+let g:airline_theme = 'minimalist'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#neomake#enabled = 1
@@ -105,15 +105,6 @@ augroup rust
   let g:racer_experimental_completer = 1
 augroup END
 
-" OCaml-specific
-" Merlin setup
-if executable('ocp-index')
-  let s:ocpindex = substitute(system('opam config var share'), '\n$', '', '''') . "/ocp-index"
-  execute "set rtp+=" . s:ocpindex . "/vim"
-endif
-
-autocmd FileType ocaml execute "set rtp+=" . substitute(system('opam config var share'), '\n$', '', ''''''). "typerex/ocp-ident"
-
 " TS/JS-specific
 let g:deoplete#sources#ternjs#filetypes = [
 								\ 'js',
@@ -123,10 +114,6 @@ let g:tern#command = ["tern"]
 let g:tern#arguments = ["--persistent"]
 let g:nvim_typescript#type_info_on_hold = 1
 let g:jsdoc_enable_es6 = 1
-
-" OCaml-specific
-let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-execute "set rtp+=" . g:opamshare . "/merlin/vim"
 
 " C-specific
 autocmd BufEnter *.tpp :setlocal filetype=cpp
