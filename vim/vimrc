@@ -29,7 +29,6 @@ call plug#begin(g:my#plug_absdir)
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'zchee/deoplete-jedi'
-Plug 'copy/deoplete-ocaml'
 Plug 'zchee/deoplete-clang'
 Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 Plug 'HerringtonDarkholme/yats.vim'
