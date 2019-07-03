@@ -2,11 +2,33 @@ command! -nargs=1 Silent
 \   execute <q-args>
 \ | execute 'redraw!'
 
-" Airline
-let g:airline_theme = 'minimalist'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#neomake#enabled = 1
+" Lightline configuration
+let g:lightline = {
+  \   'colorscheme': 'material_vim',
+  \   'active': {
+  \     'left':[ [ 'mode', 'paste' ],
+  \              [ 'gitbranch', 'readonly', 'filename', 'modified' ]
+  \     ]
+  \   },
+	\   'component': {
+	\     'lineinfo': ' %3l:%-2v',
+	\   },
+  \   'component_function': {
+  \     'gitbranch': 'fugitive#head',
+  \   }
+  \ }
+let g:lightline.separator = {
+	\   'left': '', 'right': ''
+  \}
+let g:lightline.subseparator = {
+	\   'left': '', 'right': '' 
+  \}
+let g:lightline.tabline =  {
+  \ 'left': [['tabs']],
+  \ 'right': [['close']]
+\ }
+set showtabline=2
+set guioptions-=e
 
 " Ack
 if executable('ag')
