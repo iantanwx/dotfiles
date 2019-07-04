@@ -69,3 +69,4 @@ fi
 # absolute last
 # highlight as you type
 zplug "zsh-users/zsh-syntax-highlighting", defer:3
+zplug "greymd/docker-zsh-completion"
