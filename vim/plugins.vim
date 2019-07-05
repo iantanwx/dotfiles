@@ -13,6 +13,12 @@ let g:lightline = {
 	\   'component': {
 	\     'lineinfo': ' %3l:%-2v',
 	\   },
+  \   'component_expand': {
+  \     'buffers': 'lightline#bufferline#buffers',
+  \   },
+  \   'component_type': {
+  \     'buffers': 'tabsel',
+  \   },
   \   'component_function': {
   \     'gitbranch': 'fugitive#head',
   \   }
@@ -21,10 +27,10 @@ let g:lightline.separator = {
 	\   'left': '', 'right': ''
   \}
 let g:lightline.subseparator = {
-	\   'left': '', 'right': '' 
+	\   'left': '', 'right': ''
   \}
 let g:lightline.tabline =  {
-  \ 'left': [['tabs']],
+  \ 'left': [['buffers']],
   \ 'right': [['close']]
 \ }
 set showtabline=2
