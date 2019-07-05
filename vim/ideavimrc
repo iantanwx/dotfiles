@@ -1,6 +1,10 @@
 " Leader
 nnoremap <Space> <Nop>
-let mapleader = "\<Space>"
+
+" Integrate with system clipboard
+let mapleader = " "
+
+set surround
 
 " Normal Mode
 " Buffers
@@ -8,7 +12,15 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
-nnoremap <silent> <leader>bq :Bdelete<CR>
+nnoremap <silent> <Leader>bq :Bdelete<CR>
+
+" VCS
+nmap <Leader>gs :action CheckinProject<CR>
+nmap <Leader>gp :action Vcs.Push<CR>
+
+" Weird vim-easymotion mappings
+nmap <Leader><Leader>j :action KJumpAction.Line<CR>
+nmap <Leader><Leader>k :action KJumpAction.Line<CR>
 
 " reset search
 nnoremap <Esc> :noh<CR>
