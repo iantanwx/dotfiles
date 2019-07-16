@@ -240,7 +240,6 @@ __auto_nvm_use() {
     nvm use default
     return $?
   fi
-  #[[ -f ".nvmrc" && -r ".nvmrc" ]] && nvm use
 }
 # NVM loaded in shell/before.bash -> shell/node.bash
 dko::has "nvm" && add-zsh-hook chpwd __auto_nvm_use
@@ -312,6 +311,10 @@ if [[ "$0" == *"zsh" ]]; then
   # SSH use hosts from ~/.ssh/config
   hosts=($(egrep '^Host ' "$HOME/.ssh/config" | grep -v '*' | awk '{print $2}' ))
   zstyle ':completion:*:hosts' hosts $hosts
+
+  # kubectl completion
+  echo "if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi"
+
 fi
 
 # ============================================================================
