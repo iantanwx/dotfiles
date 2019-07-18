@@ -1,7 +1,6 @@
 # shell/after.bash
 #
 # Runs before local/* .zshrc and .bashrc
-#
 
 export DKO_SOURCE="${DKO_SOURCE} -> shell/after.bash {"
 
@@ -56,6 +55,15 @@ dko::has "nvim" && {
 
 dko::has "vopen" && alias e="vopen"
 
+# ============================================================================
+# Set kops variables
+# ============================================================================
+export KOPS_STATE_STORE=s3://gofinance-aws-kops/kops
+
+export AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key --profile gojek)
+
+export AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id --profile gojek)
+
 # ==============================================================================
 # Grunt completion
 # ==============================================================================
@@ -67,13 +75,6 @@ dko::has "grunt" && {
 }
 
 # ==============================================================================
-# npm completion
-# Now only on zsh via zsh-better-npm-completion
-# ==============================================================================
-
-#eval "$(npm completion 2>/dev/null)"
-
-# ==============================================================================
 # travis completion
 # ==============================================================================
 
@@ -81,10 +82,14 @@ dko::source "${TRAVIS_CONFIG_PATH}/travis.bash" && \
   export DKO_SOURCE="${DKO_SOURCE} -> travis"
 
 # ============================================================================
-# yarn completion
+# kubectl completion
 # ============================================================================
 
 dko::source "${DKO_DEFAULT_NODE_PATH}/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh"
+
+dko::has "kubectl" && {
+  eval "$(kubectl completion zsh)"
+}
 
 # ==============================================================================
 # Auto-manpath

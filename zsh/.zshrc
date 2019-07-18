@@ -311,10 +311,6 @@ if [[ "$0" == *"zsh" ]]; then
   # SSH use hosts from ~/.ssh/config
   hosts=($(egrep '^Host ' "$HOME/.ssh/config" | grep -v '*' | awk '{print $2}' ))
   zstyle ':completion:*:hosts' hosts $hosts
-
-  # kubectl completion
-  echo "if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi"
-
 fi
 
 # ============================================================================
