@@ -32,7 +32,6 @@ Plug 'zchee/deoplete-jedi'
 Plug 'zchee/deoplete-clang'
 Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'Shougo/neoinclude.vim'
 Plug 'mileszs/ack.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'shougo/echodoc'
@@ -50,8 +49,6 @@ Plug 'ternjs/tern_for_vim'
 Plug 'SirVer/ultisnips'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'moll/vim-bbye'
 Plug 'tpope/vim-commentary'
 Plug 'hail2u/vim-css3-syntax'
@@ -69,7 +66,6 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'uarun/vim-protobuf'
 Plug 'racer-rust/vim-racer'
 Plug 'tpope/vim-rhubarb'
-Plug 'tomlion/vim-solidity'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'Vimjas/vim-python-pep8-indent'
@@ -244,8 +240,8 @@ set undoreload=10000
 " Completion -- see also plugins/completion.vim
 " ----------------------------------------------------------------------------
 
-set completeopt+=noinsert
-set completeopt+=noselect
+" set completeopt+=noinsert
+" set completeopt+=noselect
 
 " ----------------------------------------------------------------------------
 " Trailing whitespace

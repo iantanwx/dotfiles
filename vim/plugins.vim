@@ -82,14 +82,15 @@ call neomake#configure#automake({
 \ 'BufWritePost': {'delay': 0},
 \ })
 
-"Deoplete
+" Deoplete
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
 let g:deoplete#auto_complete_start_length = 1
 call deoplete#custom#source('_', 'converters', ['converter_remove_overlap', 'converter_truncate_abbr', 'converter_truncate_menu', 'converter_auto_delimiter', 'converter_auto_paren'])
 
 " Echodoc
-let g:echodoc_enable_at_startup = 1
+let g:echodoc#enable_at_startup = 1
+let g:echodoc#type = 'virtual'
 
 " Easymotion
 let g:EasyMotion_smartcase = 1
@@ -106,7 +107,6 @@ let g:neoterm_fixedsize=1
 
 " Go-specific
 function! GoTestCurrentFile()
-  " call neoterm#do('cd %:p:h && go test -v -timeout 30s')
   Silent GoTest
 endfunction
 
@@ -125,6 +125,7 @@ let g:go_disable_autoinstall = 0
 
 " automatically run tests for related package
 augroup golang
+  set noshowmode
   autocmd!
   autocmd BufWritePost *.go call GoTestCurrentFile()
 augroup END

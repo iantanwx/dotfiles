@@ -25,10 +25,11 @@ export DKO_SOURCE="${DKO_SOURCE} -> shell/before.bash {"
 
 # This also adds completions based on global nvm->npm packages
 . "${DOTFILES}/shell/go.bash"
+. "${DOTFILES}/shell/haskell.bash"
+. "${DOTFILES}/shell/java.bash"
 . "${DOTFILES}/shell/node.bash"
 . "${DOTFILES}/shell/python.bash"
 . "${DOTFILES}/shell/ruby.bash"
 . "${DOTFILES}/shell/rust.bash"
-. "${DOTFILES}/shell/java.bash"
 
 export DKO_SOURCE="${DKO_SOURCE} }"

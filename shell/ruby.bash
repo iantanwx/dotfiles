@@ -11,6 +11,11 @@ export GEMRC="${DOTFILES}/ruby/gemrc"
 [ -f "${DKO_BREW_PREFIX}/opt/openssl" ] && \
   export RUBY_CONFIGURE_OPTS="--with-openssl-dir=${DKO_BREW_PREFIX}/opt/openssl"
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
 # auto bundle exec to use gems in current ruby
 # see https://github.com/rvm/rubygems-bundler#note-for-rubygems--220
 # disabled -- screws up global gem use (e.g. `brew` when you're in a dir with
