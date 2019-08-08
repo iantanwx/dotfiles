@@ -20,8 +20,6 @@ zplug "paulirish/git-open",       as:command
 # my fork of cdbk, zsh hash based directory bookmarking
 zplug "davidosomething/cdbk"
 
-# zplug "~/projects/vopen", \
-#   from:local, \
 zplug "davidosomething/vopen",     \
   use:"{vopen,vopen-nofork}", \
   as:command
@@ -59,12 +57,6 @@ if [[ $OSTYPE == "darwin"* ]]; then
   zplug "vasyharan/zsh-brew-services",  \
     defer:2
 fi
-
-# # completions I have locally
-# zplug "${ZDOTDIR}",     \
-#   from:local,           \
-#   use:"completions/_*", \
-#   defer:18
 
 # absolute last
 # highlight as you type
