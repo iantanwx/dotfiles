@@ -26,8 +26,8 @@ shift + alt - l : chunkc tiling::window --warp east
 alt - r : chunkc tiling::desktop --rotate 90
 
 # change focused desktop
-ctrl - left : chunkc tiling::desktop -f prev
-ctrl - right : chunkc tiling::desktop -f next
+ctrl - h : chunkc tiling::desktop -f prev
+ctrl - l : chunkc tiling::desktop -f next
 
 # change focused monitor
 alt - left : chunkc tiling::monitor -f prev
