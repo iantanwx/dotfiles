@@ -98,6 +98,7 @@ endfunction
 
 let g:go_code_completion_enabled = 0
 let g:go_echo_go_info = 0
+let g:go_doc_keywordprg_enabled = 0
 let g:go_highlight_types = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_methods = 1
