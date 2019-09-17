@@ -151,9 +151,10 @@
 	required  = true
 
 [filter "lfs"]
-	clean     = git-lfs clean %f
-	smudge    = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 	required  = true
+	process = git-lfs filter-process
 
 [mailmap]
 	file = "~/.secret/git/.mailmap"
@@ -191,8 +192,8 @@
 	username = "iantanwx"
 
 [user]
-	name  = "Ian Tan"
-	email = "iantanwx@gmail.com"
+	name = Ian Tan
+	email = ian.tan@go-jek.com
 
 # ============================================================================
 # Local
