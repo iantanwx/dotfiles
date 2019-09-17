@@ -55,6 +55,9 @@ PATH="${HOME}/.cargo/bin:${PATH}"
 # npm packages
 PATH="${HOME}/.yarn/bin:${PATH}"
 
+# terraform 0.11
+PATH="/usr/local/opt/terraform@0.11/bin:$PATH"
+
 # ----------------------------------------------------------------------------
 # Local bin
 # ----------------------------------------------------------------------------
