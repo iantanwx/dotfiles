@@ -26,52 +26,44 @@ endif
 " ----------------------------------------------------------------------------
 call plug#begin(g:my#plug_absdir)
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-Plug 'zchee/deoplete-jedi'
-Plug 'zchee/deoplete-clang'
-Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
-Plug 'HerringtonDarkholme/yats.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'SirVer/ultisnips'
+Plug 'kaicataldo/material.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'mengelbrecht/lightline-bufferline'
 Plug 'mileszs/ack.vim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'shougo/echodoc'
+Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'valloric/ListToggle'
-Plug 'kaicataldo/material.vim'
 Plug 'neomake/neomake'
-Plug 'shougo/neopairs.vim'
 Plug 'kassio/neoterm'
-Plug 'scrooloose/nerdtree'
-Plug 'airblade/vim-rooter'
-Plug 'rust-lang/rust.vim'
-Plug 'ternjs/tern_for_vim'
-Plug 'SirVer/ultisnips'
-Plug 'itchyny/lightline.vim'
-Plug 'mengelbrecht/lightline-bufferline'
-Plug 'moll/vim-bbye'
-Plug 'tpope/vim-commentary'
-Plug 'hail2u/vim-css3-syntax'
-Plug 'sebdah/vim-delve'
 Plug 'easymotion/vim-easymotion'
-Plug 'tpope/vim-fugitive'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'jparise/vim-graphql'
-Plug 'pangloss/vim-javascript'
-Plug 'heavenshell/vim-jsdoc'
-Plug 'JamshedVesuna/vim-markdown-preview'
-Plug 'aklt/plantuml-syntax'
-Plug 'scrooloose/vim-slumlord'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'uarun/vim-protobuf'
-Plug 'racer-rust/vim-racer'
-Plug 'tpope/vim-rhubarb'
+Plug 'jiangmiao/auto-pairs'
+Plug 'shougo/neopairs.vim'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'airblade/vim-rooter'
+Plug 'moll/vim-bbye'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'sebdah/vim-delve'
+Plug 'tpope/vim-fugitive'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'jparise/vim-graphql'
+Plug 'heavenshell/vim-jsdoc'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'uarun/vim-protobuf'
+Plug 'aklt/plantuml-syntax'
+Plug 'pedrohdz/vim-yaml-folds'
+Plug 'scrooloose/vim-slumlord'
+Plug 'tpope/vim-rhubarb'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'tell-k/vim-autopep8'
 Plug 'vim-python/python-syntax'
-Plug 'pedrohdz/vim-yaml-folds'
 Plug 'junegunn/vim-easy-align'
 
 call plug#end()
@@ -110,9 +102,6 @@ colorscheme material
 
 set title                             " wintitle = filename - vim
 
-" this is already set by modern terminal
-"set ttyfast
-
 if !has('nvim')
   set lazyredraw                      " macros don't update display
 endif
@@ -124,21 +113,21 @@ set number
 set numberwidth=5
 
 " show context around current cursor position
-set scrolloff=8
-set sidescrolloff=16
+" set scrolloff=8
+" set sidescrolloff=16
 
-set textwidth=78
+" set textwidth=78
 " the line will be right after column 80, &tw+3
-set colorcolumn=+3
+" set colorcolumn=+3
 set cursorline
+
+set signcolumn=yes
 
 set synmaxcol=512                     " don't syntax highlight long lines
 
 " Splits
 set splitbelow
 set splitright
-
-set previewheight=30
 
 " ------------------------------------
 " QF/Loclist
@@ -162,6 +151,7 @@ set showtabline=0                     " start OFF, toggle =2 to show tabline
 " This is slow on some terminals and often gets hidden by msgs so leave it off
 set noshowmode                        " don't show -- INSERT -- in cmdline
 set shortmess+=c
+set updatetime=300
 
 " ----------------------------------------------------------------------------
 " Input
@@ -177,16 +167,7 @@ if !has('nvim')
   set ttimeoutlen=10
 endif
 
-" no longer using comma so I can reverse repeat fFtT searches
-" no longer using \ so I can type escaped chars :/
-" needs to be before bundle so plugins map correctly
 let g:mapleader = "\<Space>"
-"
-" ----------------------------------------------------------------------------
-" FS
-" ----------------------------------------------------------------------------
-" Automatically switch working directory to the file's wd
-autocmd BufEnter * silent! lcd %:p:h
 
 " ----------------------------------------------------------------------------
 " Wild and file globbing stuff in command mode
@@ -218,6 +199,9 @@ set wildignore+=*.swp,.lock,.DS_Store,._*,tags.lock
 " ----------------------------------------------------------------------------
 " File saving
 " ----------------------------------------------------------------------------
+
+set nobackup
+set nowritebackup
 
 set fileformats=unix,mac,dos
 set fileformat=unix

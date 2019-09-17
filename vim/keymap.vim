@@ -21,7 +21,7 @@ let g:lt_location_list_toggle_map = '<leader><leader>l'
 let g:lt_quickfix_list_toggle_map = '<leader><leader>q'
 
 " vim-fugitive
-nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gs :G<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gp :Gpush<CR>
 
@@ -31,29 +31,26 @@ nnoremap <Esc> :noh<CR>
 " Insert Mode
 inoremap jj <Esc>
 
-" Deoplete
-inoremap <silent> <CR> <C-r>=<SID>cr_fn()<CR>
-function! s:cr_fn()
-  return (pumvisible() ? "\<C-y>" : "") . "\<CR>"
-endfunction
-inoremap <expr><BS> deoplete#smart_close_popup()."\<C-h>"
+" COC
+" Accept currently selected completion candidate with <CR>
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-" Easymotion
-" nnoremap <leader>l <Plug>(easymotion-lineforward)
-" nnoremap <leader>j <Plug>(easymotion-j)
-" nnoremap <leader>k <Plug>(easymotion-k)
-" nnoremap <leader>h <Plug>(easymotion-linebackward)
+" Close preview window once completion is done
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+
+" Go to *
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " Filetype-specific
 " Go
-autocmd FileType go nmap <buffer> <leader>T :GoTest -v<CR>
 autocmd FileType go nnoremap <silent> <leader>db :DlvToggleBreakpoint<CR>
 autocmd FileType go nnoremap <leader>dd :DlvDebug<CR>
 autocmd FileType go nnoremap <leader>dt :DlvTest<CR>
 
 " TypeScript/JavaScript
-autocmd FileType typescript,typescript.tsx nnoremap <silent> <leader>gd :TSDef<CR>
-autocmd FileType typescript,typescript.tsx nnoremap <silent> <leader>gh :TSDefPreview<CR>
 autocmd FileType typescript,typescript.tsx,javascript nmap <silent> <leader>d <Plug>(jsdoc)
 
 " Rust

@@ -1,7 +1,3 @@
-command! -nargs=1 Silent
-\   execute <q-args>
-\ | execute 'redraw!'
-
 " Lightline configuration
 let g:lightline = {
   \   'colorscheme': 'material_vim',
@@ -82,16 +78,6 @@ call neomake#configure#automake({
 \ 'BufWritePost': {'delay': 0},
 \ })
 
-" Deoplete
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_smart_case = 1
-let g:deoplete#auto_complete_start_length = 1
-call deoplete#custom#source('_', 'converters', ['converter_remove_overlap', 'converter_truncate_abbr', 'converter_truncate_menu', 'converter_auto_delimiter', 'converter_auto_paren'])
-
-" Echodoc
-let g:echodoc#enable_at_startup = 1
-let g:echodoc#type = 'virtual'
-
 " Easymotion
 let g:EasyMotion_smartcase = 1
 let g:EasyMotion_startofline = 0
@@ -107,21 +93,18 @@ let g:neoterm_fixedsize=1
 
 " Go-specific
 function! GoTestCurrentFile()
-  Silent GoTest
+  silent GoTest
 endfunction
 
-call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
-let g:delve_backend = "native"
+let g:go_code_completion_enabled = 0
+let g:go_echo_go_info = 0
+let g:go_highlight_types = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-let g:go_auto_type_info = 1
-let g:go_updatetime = 300
-let g:go_def_mode = 'gopls'
-let g:go_info_mode = 'gopls'
-let g:go_disable_autoinstall = 0
+let g:delve_backend = "native"
 
 " automatically run tests for related package
 augroup golang
@@ -131,31 +114,16 @@ augroup golang
 augroup END
 
 " Rust-specific
-augroup rust
-  set hidden
-  let g:racer_cmd = "~/.cargo/bin/racer"
-  let g:racer_experimental_completer = 1
-augroup END
-
-" TS/JS-specific
-let g:deoplete#sources#ternjs#filetypes = [
-								\ 'js',
-								\ 'jsx'
-								\ ]
-let g:tern#command = ["tern"]
-let g:tern#arguments = ["--persistent"]
-let g:nvim_typescript#type_info_on_hold = 1
-let g:jsdoc_enable_es6 = 1
-
-" C-specific
-autocmd BufEnter *.tpp :setlocal filetype=cpp
-let g:deoplete#sources#clang#libclang_path = "/usr/local/opt/llvm/lib/libclang.dylib"
-let g:deoplete#sources#clang#clang_header = "/usr/local/opt/llvm/lib/clang/"
+" augroup rust
+"   set hidden
+"   let g:racer_cmd = "~/.cargo/bin/racer"
+"   let g:racer_experimental_completer = 1
+" augroup END
 
 " Python-specific
-let g:deoplete#sources#jedi#show_docstring = 1
-let g:python_highlight_all = 1
-let g:autopep8_on_save = 0
+" let g:deoplete#sources#jedi#show_docstring = 1
+" let g:python_highlight_all = 1
+" let g:autopep8_on_save = 0
 
 " Markdown-specific
 let vim_markdown_preview_browser='Google Chrome'
