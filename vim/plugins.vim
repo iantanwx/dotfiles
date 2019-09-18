@@ -122,9 +122,8 @@ augroup END
 " augroup END
 
 " Python-specific
-" let g:deoplete#sources#jedi#show_docstring = 1
-" let g:python_highlight_all = 1
-" let g:autopep8_on_save = 0
+let g:python_highlight_all = 1
+let g:autopep8_on_save = 0
 
 " Markdown-specific
 let vim_markdown_preview_browser='Google Chrome'

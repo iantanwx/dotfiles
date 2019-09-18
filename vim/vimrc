@@ -44,11 +44,11 @@ Plug 'shougo/neopairs.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-rooter'
 Plug 'moll/vim-bbye'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'sebdah/vim-delve'
-Plug 'tpope/vim-fugitive'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'jparise/vim-graphql'
@@ -112,18 +112,12 @@ set visualbell t_vb=
 set number
 set numberwidth=5
 
-" show context around current cursor position
-" set scrolloff=8
-" set sidescrolloff=16
-
-" set textwidth=78
-" the line will be right after column 80, &tw+3
-" set colorcolumn=+3
 set cursorline
 
 set signcolumn=yes
 
 set synmaxcol=512                     " don't syntax highlight long lines
+set updatetime=300
 
 " Splits
 set splitbelow
@@ -219,13 +213,6 @@ set swapfile
 set undofile
 set undolevels=1000
 set undoreload=10000
-
-" ----------------------------------------------------------------------------
-" Completion -- see also plugins/completion.vim
-" ----------------------------------------------------------------------------
-
-" set completeopt+=noinsert
-" set completeopt+=noselect
 
 " ----------------------------------------------------------------------------
 " Trailing whitespace

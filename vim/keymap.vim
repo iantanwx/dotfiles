@@ -55,6 +55,10 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+" Unimpaired-style diagnostic message navigation
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
 " Filetype-specific
 " Go
 autocmd FileType go nnoremap <silent> <leader>db :DlvToggleBreakpoint<CR>
