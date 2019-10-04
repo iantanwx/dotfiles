@@ -1,9 +1,13 @@
 " Lightline configuration
+function! CocCurrentFunction()
+    return get(b:, 'coc_current_function', '')
+endfunction
+
 let g:lightline = {
   \   'colorscheme': 'material_vim',
   \   'active': {
   \     'left':[ [ 'mode', 'paste' ],
-  \              [ 'gitbranch', 'readonly', 'filename', 'modified' ]
+  \              [ 'cocstatus', 'currentfunction', 'gitbranch', 'readonly', 'filename', 'modified' ]
   \     ]
   \   },
 	\   'component': {
@@ -17,6 +21,8 @@ let g:lightline = {
   \   },
   \   'component_function': {
   \     'gitbranch': 'fugitive#head',
+  \     'cocstatus': 'coc#status',
+  \     'currentfunction': 'CocCurrentFunction'
   \   }
   \ }
 let g:lightline.separator = {
