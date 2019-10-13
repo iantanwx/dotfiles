@@ -143,6 +143,7 @@
 # editor = "vim -f" ; removed so git will use env EDITOR or VISUAL
 	sharedRepository = 0664
 	commentchar = "#"
+	autocrlf = input
 # pager = less -x4 ; removed so git will use the env GIT_PAGER
 
 [filter "media"]

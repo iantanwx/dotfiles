@@ -49,6 +49,9 @@ function! s:show_documentation()
   endif
 endfunction
 
+" Rename
+nmap <leader>rn <Plug>(coc-rename)
+
 " Go to *
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
