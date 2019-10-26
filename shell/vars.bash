@@ -146,4 +146,11 @@ export XINITRC="${DOTFILES}/linux/.xinitrc"
 export XAPPLRESDIR="${DOTFILES}/linux"
 
 export DKO_SOURCE="${DKO_SOURCE} }"
+
+# Nexus
+export NEXUS_REPO_USER="artifactor"
+export NEXUS_REPO_PASS="ErM8AKsB3wIb,/j"
+export NEXUS_REPO_RO_USER="downloader"
+export NEXUS_REPO_RO_PASS="YTE0ZjViODZmYTEy"
+
 # vim: ft=sh :
