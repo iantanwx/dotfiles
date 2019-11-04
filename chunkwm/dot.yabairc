@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# delete monocle mode lock files from previous sessions
+find "${TMPDIR}" -type f -perm +111 -name "yabai_${USER}_monocle_mode_*" -delete
+
 # bar settings
 yabai -m config status_bar                   on
 yabai -m config status_bar_text_font         "Fire Code:Retina:14.0"
@@ -21,7 +24,7 @@ yabai -m config window_opacity_duration      0.0
 yabai -m config window_shadow                on
 yabai -m config window_border                off
 yabai -m config window_border_placement      inset
-yabai -m config window_border_width          4
+yabai -m config window_border_width          2.0
 yabai -m config window_border_radius         -1.0
 yabai -m config active_window_border_topmost off
 yabai -m config active_window_border_color   0xff775759

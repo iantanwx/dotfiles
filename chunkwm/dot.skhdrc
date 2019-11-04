@@ -31,8 +31,8 @@ ctrl - left : yabai -m space --focus prev
 ctrl - right : yabai -m space --focus next
 
 # move focused container to workspace
-shift + cmd - 1 : yabai -m window --space  1;
-shift + cmd - 2 : yabai -m window --space  2;
-shift + cmd - 3 : yabai -m window --space  3;
-shift + cmd - 4 : yabai -m window --space  4;
-shift + cmd - 5 : yabai -m window --space  5;
+shift + alt - 1 : yabai -m window --space  1;
+shift + alt - 2 : yabai -m window --space  2;
+shift + alt - 3 : yabai -m window --space  3;
+shift + alt - 4 : yabai -m window --space  4;
+shift + alt - 5 : yabai -m window --space  5;

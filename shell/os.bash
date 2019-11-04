@@ -25,7 +25,6 @@ if [ "$DOTFILES_OS" = "Darwin" ]; then
   # just assume brew is in normal location, don't even check for it
   DKO_BREW_PREFIX="/usr/local"
   # this is required to make webpack dev server work right
-  ulimit -n 65536 65536
   export DKO_BREW_PREFIX
 
 # ============================================================================
