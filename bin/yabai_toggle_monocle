@@ -39,8 +39,8 @@ if ! [ -x "${script}" ]; then
 		label="monocle_mode_${target_space_id}_space_changed"
 	yabai -m signal --add event=window_created action="${script}" \
 		label="monocle_mode_${target_space_id}_window_created"
-	yabai -m signal --add event=window_resized action="${script}" \
-		label="monocle_mode_${target_space_id}_window_resized"
+	yabai -m signal --add event=window_destroyed action="${script}" \
+		label="monocle_mode_${target_space_id}_window_destroyed"
 
 	# If we re-enable monocle mode on a space before entering, but after having
 	# disabled monocle mode, we need to avoid toggling zoom-fullscreen twice
@@ -64,7 +64,7 @@ else
 	# Stop listening to space_changed, window_created
 	yabai -m signal --remove "monocle_mode_${target_space_id}_space_changed"
   yabai -m signal --remove "monocle_mode_${target_space_id}_window_created"
-  yabai -m signal --remove "monocle_mode_${target_space_id}_window_resized"
+  yabai -m signal --remove "monocle_mode_${target_space_id}_window_destroyed"
 
 	# If we disable monocle mode on the active space, run the script already
 	if [ "${current_space}" = "${target_space}" ]; then
