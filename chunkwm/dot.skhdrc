@@ -30,6 +30,10 @@ alt + cmd - n : yabai -m space --create && \
 ctrl - left : yabai -m space --focus prev
 ctrl - right : yabai -m space --focus next
 
+# change focused display
+ctrl + cmd - left : yabai -m display --focus prev
+ctrl + cmd - right : yabai -m display --focus next
+
 # move focused container to workspace
 shift + alt - 1 : yabai -m window --space  1;
 shift + alt - 2 : yabai -m window --space  2;
