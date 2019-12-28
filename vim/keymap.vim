@@ -12,9 +12,12 @@ nnoremap <silent> <leader>bq :Bdelete<CR>
 
 " Neoterm
 nnoremap <silent> <leader>to :Ttoggle<CR>
-nnoremap <silent> <leader>th :call neoterm#close()<CR>
-nnoremap <silent> <leader>tc :call neoterm#clear()<CR>
-nnoremap <silent> <leader>tk :call neoterm#kill()<CR>
+nnoremap <silent> <leader>th :Tclose<CR>
+nnoremap <silent> <leader>tk :Tkill<CR>
+
+nnoremap <silent> <leader>tf :TREPLSendFile<CR>
+nnoremap <silent> <leader>tl :TREPLSendLine<CR>
+vnoremap <silent> <leader>ts :TREPLSendSelection<CR>
 
 " Lists
 let g:lt_location_list_toggle_map = '<leader><leader>l'
@@ -32,11 +35,24 @@ nnoremap <Esc> :noh<CR>
 inoremap jj <Esc>
 
 " COC
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
 " Accept currently selected completion candidate with <CR>
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Close preview window once completion is done
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 " Show documentation
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -48,6 +64,9 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+" Highlight symbol under cursor on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Rename
 nmap <leader>rn <Plug>(coc-rename)

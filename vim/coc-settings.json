@@ -4,6 +4,18 @@
       "command": "gopls",
       "rootPatterns": ["go.mod"],
       "filetypes": ["go"]
+    },
+    "haskell": {
+      "command": "hie-wrapper",
+      "rootPatterns": [".stack.yaml", "cabal.config", "package.yaml"],
+      "filetypes": ["hs", "lhs", "haskell"],
+      "initializationOptions": {
+        "languageServerHaskell": {
+          "hlintOn": true,
+          "maxNumberOfProblems": 10,
+          "completionSnippetsOn": true
+        }
+      }
     }
   },
   "python.pythonPath": "~/.local/pyenv/versions/3.7.3/bin/python"

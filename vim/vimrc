@@ -26,7 +26,7 @@ endif
 " ----------------------------------------------------------------------------
 call plug#begin(g:my#plug_absdir)
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install()}}
 Plug 'SirVer/ultisnips'
 Plug 'kaicataldo/material.vim'
 Plug 'itchyny/lightline.vim'
@@ -54,6 +54,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'jparise/vim-graphql'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'neovimhaskell/haskell-vim'
+Plug 'alx741/vim-hindent'
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'uarun/vim-protobuf'
