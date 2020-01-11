@@ -6,7 +6,7 @@ let g:nvim_dir = fnamemodify(resolve(expand('$MYVIMRC')), ':p:h')
 " :terminal emulator
 " ============================================================================
 
-tnoremap <Esc>  <C-\><C-n>
+" tnoremap <Esc>  <C-\><C-n>
 
 let g:terminal_scrollback_buffer_size = 100000
 

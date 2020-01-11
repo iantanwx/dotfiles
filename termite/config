@@ -11,9 +11,8 @@ dynamic_title           = true
 # filter_unmatched_urls
 
 # fallback and desired fonts
-font = FiraCode 12
+font = Fira Code 12
 font = Fira Mono 10
-font = Fira Mono For Powerline 12
 
 fullscreen              = false
 geometry                = 144x52+800-50
