@@ -45,11 +45,16 @@ __symlink() {
   dko::symlink ternjs/dot.tern-project          .tern-project
 
 
+  # window management
   case "$OSTYPE" in
     darwin*)
       dko::symlink chunkwm/dot.yabairc          .yabairc
       dko::symlink chunkwm/dot.skhdrc           .skhdrc
       ;;
+    linux*)
+      dko::symlink bspwm/bspwmrc                .config/bspwm/bspwmrc
+      dko::symlink sxhkd/sxhkdrc                .config/bspwm/sxhkdrc
+      dko::symlink polybar                      .config/polybar
   esac
 
   # Shell
