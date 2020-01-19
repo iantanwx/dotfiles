@@ -18,4 +18,4 @@ bspc rule -a spotify desktop='X'
 
 sxhkd &
 ~/.config/polybar/launch.sh &
-feh --bg-center ~/Pictures/wallpaper_starry_night.jpg
+feh --bg-fill ~/Pictures/wallpaper_starry_night.jpg
