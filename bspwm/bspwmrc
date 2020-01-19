@@ -14,5 +14,7 @@ bspc config gapless_monocle      true
 
 bspc rule -a Termite desktop='I'
 bspc rule -a Google-chrome desktop='VI'
+bspc rule -a Franz desktop='VII'
+bspc rule -a jetbrains-idea desktop='II'
 
 ~/.config/polybar/launch.sh &

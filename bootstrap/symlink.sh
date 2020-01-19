@@ -32,6 +32,7 @@ __symlink() {
   dko::symlink git/dot.gitignore                .config/git/ignore
   dko::symlink shell/dot.inputrc                .config/readline/inputrc
   dko::symlink redshift/redshift.conf           .config/redshift/redshift.conf
+  dko::symlink rofi/config                      .config/rofi/config
 
   # (n)vim
   dko::symlink vim                              .vim
@@ -44,7 +45,6 @@ __symlink() {
   # default tern-project
   dko::symlink ternjs/dot.tern-project          .tern-project
 
-
   # window management
   case "$OSTYPE" in
     darwin*)
@@ -53,7 +53,7 @@ __symlink() {
       ;;
     linux*)
       dko::symlink bspwm/bspwmrc                .config/bspwm/bspwmrc
-      dko::symlink sxhkd/sxhkdrc                .config/bspwm/sxhkdrc
+      dko::symlink sxhkd/sxhkdrc                .config/sxhkd/sxhkdrc
       dko::symlink polybar                      .config/polybar
   esac
 
