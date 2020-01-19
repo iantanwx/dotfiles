@@ -1,7 +1,5 @@
 #! /bin/sh
 
-sxhkd &
-
 bspc monitor DVI-I-1 -d I II III IV V
 bspc monitor HDMI-0 -d VI VII VIII IX X
 
@@ -16,5 +14,8 @@ bspc rule -a Termite desktop='I'
 bspc rule -a Google-chrome desktop='VI'
 bspc rule -a Franz desktop='VII'
 bspc rule -a jetbrains-idea desktop='II'
+bspc rule -a spotify desktop='X'
 
+sxhkd &
 ~/.config/polybar/launch.sh &
+feh --bg-center ~/Pictures/wallpaper_starry_night.jpg
