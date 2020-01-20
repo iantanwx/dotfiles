@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /usr/bin/env zsh
 
 bspc monitor DVI-I-1 -d I II III IV V
 bspc monitor HDMI-0 -d VI VII VIII IX X
@@ -12,9 +12,9 @@ bspc config gapless_monocle      true
 
 bspc rule -a Termite desktop='I'
 bspc rule -a Google-chrome desktop='VI'
-bspc rule -a Franz desktop='VII'
+bspc rule -a Franz desktop='VIII'
 bspc rule -a jetbrains-idea desktop='II'
-bspc rule -a spotify desktop='X'
+bspc rule -a Spotify desktop='X'
 
 sxhkd &
 ~/.config/polybar/launch.sh &

@@ -70,22 +70,6 @@ export GIT_PAGER="$PAGER"
 # ack
 export ACKRC="${DOTFILES}/ack/dot.ackrc"
 
-# apache
-# shellcheck source=/dev/null
-[ -f "/etc/apache2/envvars" ] && . "/etc/apache2/envvars"
-
-# atom editor
-export ATOM_HOME="${XDG_CONFIG_HOME}/atom"
-
-# bazaar
-export BZRPATH="${XDG_CONFIG_HOME}/bazaar"
-export BZR_PLUGIN_PATH="${XDG_DATA_HOME}/bazaar"
-export BZR_HOME="${XDG_CACHE_HOME}/bazaar"
-
-# composer
-export COMPOSER_HOME="${XDG_CONFIG_HOME}/composer"
-export COMPOSER_CACHE_DIR="${XDG_CACHE_HOME}/composer"
-
 # docker
 export DOCKER_CONFIG="${XDG_CONFIG_HOME}/docker"
 
@@ -93,9 +77,10 @@ export DOCKER_CONFIG="${XDG_CONFIG_HOME}/docker"
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_INSECURE_REDIRECT=1
 
-# java settings - mostly for minecraft launcher
-export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dswing.systemlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
-export JAVA_FONTS="/usr/share/fonts/TTF"
+# sdkman - sourced to ensure JAVA_HOME is set correctly for non-interactive shells
+export _JAVA_AWT_WM_NONREPARENTING=1
+export SDKMAN_DIR="${HOME}/.sdkman"
+[[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && . "${HOME}/.sdkman/bin/sdkman-init.sh"
 
 # less
 # -F quit if one screen (default)
@@ -114,20 +99,11 @@ export MANPAGER="$PAGER"
 # mysql
 export MYSQL_HISTFILE="${XDG_CACHE_HOME}/mysql_histfile"
 
-# node moved to shell/node loaded in shell/before
-
 # neovim
-#export NVIM_PYTHON_LOG_FILE="${DOTFILES}/logs/nvim_python.log"
 export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
-
-# R
-export R_ENVIRON_USER="${DOTFILES}/r/.Renviron"
-export R_LIBS_USER="${HOME}/.local/lib/R/library/"
 
 # readline
 export INPUTRC="${DOTFILES}/shell/dot.inputrc"
-
-# ruby moved to shell/ruby loaded in shell/before
 
 # for shellcheck
 export SHELLCHECK_OPTS="--exclude=SC1090,SC2148"
