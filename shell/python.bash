@@ -18,16 +18,6 @@ export PYLINTHOME="${XDG_CONFIG_HOME}/pylint"
 # pyenv for multiple Python binaries
 # ==============================================================================
 
-# pyenv installer seems to put it into ~/.pyenv on linux systems
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-  export PYENV_ROOT="${HOME}/.pyenv"
-elif [[ $"OSTYPE" == "darwin" ]]; then
-  export PYENV_ROOT="${HOME}/.local/pyenv"
-else
-  # default to the linux-gnu root directory
-  export PYENV_ROOT="${HOME}/.pyenv"
-fi
-
 export PYENV_ROOT="${HOME}/.pyenv"
 export PATH="${PYENV_ROOT}/bin:${PATH}"
 dko::has "pyenv" && eval "$(pyenv init -)"

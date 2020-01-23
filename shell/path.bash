@@ -46,7 +46,6 @@ PATH="/usr/local/bin:/usr/local/sbin:${DKO_SYSTEM_PATH}"
 # Package managers
 # ----------------------------------------------------------------------------
 
-# composer; COMPOSER_HOME is in shell/vars.bash
 PATH="${COMPOSER_HOME}/vendor/bin:${PATH}"
 
 # rust crates
@@ -57,6 +56,12 @@ PATH="${HOME}/.yarn/bin:${PATH}"
 
 # terraform 0.11
 PATH="/usr/local/opt/terraform@0.11/bin:$PATH"
+
+# ----------------------------------------------------------------------------
+# Helmenv
+# ----------------------------------------------------------------------------
+PATH="${HOME}/.helm:${PATH}"
+source "${HOME}/.helm/helmenv.sh"
 
 # ----------------------------------------------------------------------------
 # Local bin
