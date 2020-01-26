@@ -15,8 +15,10 @@ bspc rule -a Google-chrome desktop='VI'
 bspc rule -a Franz desktop='VIII'
 bspc rule -a jetbrains-idea desktop='II'
 bspc rule -a Spotify desktop='X'
+bspc rule -a Nemo desktop='IX'
 
 sxhkd &
+xsetroot -cursor_name left_ptr
 ~/.config/polybar/launch.sh &
 redshift &
 feh --bg-fill ~/Pictures/wallpaper_starry_night.jpg
