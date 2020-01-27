@@ -33,6 +33,7 @@ __symlink() {
   dko::symlink shell/dot.inputrc                .config/readline/inputrc
   dko::symlink redshift/redshift.conf           .config/redshift/redshift.conf
   dko::symlink rofi/config                      .config/rofi/config
+  dko::symlink dunst/dunstrc                    .config/dunst/dunstrc
 
   # (n)vim
   dko::symlink vim                              .vim

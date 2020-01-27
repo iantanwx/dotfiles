@@ -14,11 +14,13 @@ bspc rule -a Termite desktop='I'
 bspc rule -a Google-chrome desktop='VI'
 bspc rule -a Franz desktop='VIII'
 bspc rule -a jetbrains-idea desktop='II'
+bspc rule -a Postman desktop='III'
 bspc rule -a Spotify desktop='X'
 bspc rule -a Nemo desktop='IX'
 
 sxhkd &
 xsetroot -cursor_name left_ptr
+dunst &
 ~/.config/polybar/launch.sh &
 redshift -c ~/.config/redshift/redshift.conf &
 feh --bg-fill ~/Pictures/wallpaper_starry_night.jpg
