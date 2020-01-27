@@ -20,6 +20,5 @@ source "${dotfiles_path}/shell/helpers.bash"
 dko::status "Symlinking X11 dotfiles"
 # this probably isn't sourced by your session
 dko::symlink linux/.xinitrc       .xinitrc
-dko::symlink linux/.xbindkeysrc   .xbindkeysrc
 dko::symlink linux/.xprofile      .xprofile
 

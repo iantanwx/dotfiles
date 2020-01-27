@@ -21,7 +21,7 @@ export BROWSER=google-chrome-stable
 export QT_STYLE_OVERRIDE=gtk
 
 # Wine
-export WINEPREFIX="${XDG_CONFIG_HOME}/wine"
+export WINEPREFIX="${XDG_CONFIG_HOME}/.wine"
 export WINEARCH=win32
 
 export DKO_SOURCE="${DKO_SOURCE} }"
