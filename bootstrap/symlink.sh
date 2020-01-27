@@ -34,6 +34,7 @@ __symlink() {
   dko::symlink redshift/redshift.conf           .config/redshift/redshift.conf
   dko::symlink rofi/config                      .config/rofi/config
   dko::symlink dunst/dunstrc                    .config/dunst/dunstrc
+  dko::symlink picom/picom.conf                 .config/picom/picom.conf
 
   # (n)vim
   dko::symlink vim                              .vim

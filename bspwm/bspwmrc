@@ -24,3 +24,4 @@ dunst &
 ~/.config/polybar/launch.sh &
 redshift -c ~/.config/redshift/redshift.conf &
 feh --bg-fill ~/Pictures/wallpaper_starry_night.jpg
+picom &
