@@ -31,10 +31,6 @@ __symlink() {
   dko::symlink git/dot.gitconfig                .config/git/config
   dko::symlink git/dot.gitignore                .config/git/ignore
   dko::symlink shell/dot.inputrc                .config/readline/inputrc
-  dko::symlink redshift/redshift.conf           .config/redshift/redshift.conf
-  dko::symlink rofi/config                      .config/rofi/config
-  dko::symlink dunst/dunstrc                    .config/dunst/dunstrc
-  dko::symlink picom/picom.conf                 .config/picom/picom.conf
 
   # (n)vim
   dko::symlink vim                              .vim
@@ -47,16 +43,21 @@ __symlink() {
   # default tern-project
   dko::symlink ternjs/dot.tern-project          .tern-project
 
-  # window management
+  # OS-specific
   case "$OSTYPE" in
     darwin*)
       dko::symlink chunkwm/dot.yabairc          .yabairc
       dko::symlink chunkwm/dot.skhdrc           .skhdrc
       ;;
     linux*)
+      dko::symlink redshift/redshift.conf       .config/redshift/redshift.conf
+      dko::symlink rofi/config                  .config/rofi/config
+      dko::symlink dunst/dunstrc                .config/dunst/dunstrc
+      dko::symlink picom/picom.conf             .config/picom/picom.conf
       dko::symlink bspwm/bspwmrc                .config/bspwm/bspwmrc
       dko::symlink sxhkd/sxhkdrc                .config/sxhkd/sxhkdrc
       dko::symlink polybar                      .config/polybar
+      dko::symlink linux/fontconfig             .config/fontconfig/conf.d
   esac
 
   # Shell
