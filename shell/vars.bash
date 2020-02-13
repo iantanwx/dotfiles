@@ -81,8 +81,7 @@ export HOMEBREW_NO_INSECURE_REDIRECT=1
 export _JAVA_AWT_WM_NONREPARENTING=1
 # ensure that Java applications (i.e. IntelliJ inherit GTK+ look and feel)
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dswing.crossplatformlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel ${_JAVA_OPTIONS}"
-export SDKMAN_DIR="${HOME}/.sdkman"
-[[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && . "${HOME}/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="$HOME/.sdkman"
 
 # less
 # -F quit if one screen (default)

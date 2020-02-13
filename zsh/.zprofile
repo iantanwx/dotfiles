@@ -3,3 +3,5 @@
 # Sourced before .zshrc
 
 export DKO_SOURCE="${DKO_SOURCE} -> zsh/.zprofile"
+
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
