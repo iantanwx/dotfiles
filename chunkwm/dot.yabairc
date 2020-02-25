@@ -51,8 +51,8 @@ yabai -m rule --add app="^Google Chrome$" title="Ian \(Personal\)$" space=1
 yabai -m rule --add app="^Google Chrome$" title="Ian \(Work\)$" space=2
 yabai -m rule --add app="^IM\+$" space=3
 yabai -m rule --add app=Between space=3
-yabai -m rule --add app=Spotify space=4
-yabai -m rule --add app=Notion space=5
+yabai -m rule --add app=Notion space=4
+yabai -m rule --add app=Spotify space=5
 yabai -m rule --add app=iTerm2 space=6
 yabai -m rule --add app="^IntelliJ IDEA$" space=7
 yabai -m rule --add app=TablePlus space=8
