@@ -46,4 +46,16 @@ yabai -m config left_padding                 0
 yabai -m config right_padding                0
 yabai -m config window_gap                   0
 
+# rules
+yabai -m rule --add app="^Google Chrome$" title="Ian \(Personal\)" space=1
+yabai -m rule --add app="^Google Chrome$" title="Ian$" space=2
+yabai -m rule --add app="^IM\+$" space=3
+yabai -m rule --add app=Between space=3
+yabai -m rule --add app=Spotify space=4
+yabai -m rule --add app=Notion space=5
+yabai -m rule --add app=iTerm2 space=6
+yabai -m rule --add app="^IntelliJ IDEA$" space=7
+yabai -m rule --add app=TablePlus space=8
+yabai -m rule --add app=Postman space=9
+
 echo "yabai configuration loaded.."
