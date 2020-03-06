@@ -15,8 +15,8 @@ yabai -m config status_bar_space_icon        
 yabai -m config status_bar_clock_icon        
 
 # global settings
-yabai -m config mouse_follows_focus          off
-yabai -m config focus_follows_mouse          off
+yabai -m config mouse_follows_focus          on
+yabai -m config focus_follows_mouse          on
 yabai -m config window_placement             second_child
 yabai -m config window_topmost               off
 yabai -m config window_opacity               off
@@ -51,12 +51,13 @@ yabai -m rule --add app="^Google Chrome$" title="Ian \(Personal\)$" space=1
 yabai -m rule --add app="^Google Chrome$" title="Ian \(Work\)$" space=2
 yabai -m rule --add app="^IM\+$" space=3
 yabai -m rule --add app=Between space=3
-yabai -m rule --add app=Zoom space=3
-yabai -m rule --add app=Notion space=4
+yabai -m rule --add app=Zoom space=4
 yabai -m rule --add app=Spotify space=5
 yabai -m rule --add app=iTerm2 space=6
 yabai -m rule --add app="^IntelliJ IDEA$" space=7
 yabai -m rule --add app=TablePlus space=8
 yabai -m rule --add app=Postman space=9
+yabai -m rule --add app=Notion space=10
+yabai -m rule --add app="^System Preferences$" manage=off
 
 echo "yabai configuration loaded.."
