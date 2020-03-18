@@ -21,6 +21,7 @@ bspc rule -a Nemo desktop='V'
 bspc rule -a Notion desktop='V'
 bspc rule -a Google-chrome desktop='VI'
 bspc rule -a Franz desktop='VIII'
+bspc rule -a Slack desktop='VIII'
 bspc rule -a zoom desktop='IX'
 bspc rule -a Spotify desktop='X'
 
