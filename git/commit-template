@@ -6,12 +6,14 @@
 # REQUIRED <HEADER> <type>(scope): lowercase present tense subject no period
 #feat():
 #fix():
-#perf():
-#docs():
-#style():
-#chore():
-#refactor():
-#test():
+#build:
+#ci:
+#chore:
+#docs:
+#style:
+#refactor:
+#perf:
+#test:
 
 # OPTIONAL <BODY> present tense body
 
