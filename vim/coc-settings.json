@@ -18,5 +18,5 @@
       }
     }
   },
-  "python.pythonPath": "~/.local/pyenv/versions/3.7.3/bin/python"
+  "python.jediEnabled": false
 }
