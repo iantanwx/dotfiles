@@ -26,48 +26,61 @@ endif
 " ----------------------------------------------------------------------------
 call plug#begin(g:my#plug_absdir)
 
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install()}}
-Plug 'SirVer/ultisnips'
-Plug 'kaicataldo/material.vim'
+Plug 'drewtempelmeyer/palenight.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
-Plug 'mileszs/ack.vim'
+
 Plug 'scrooloose/nerdtree'
+Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'valloric/ListToggle'
-Plug 'neomake/neomake'
+Plug 'airblade/vim-rooter'
 Plug 'kassio/neoterm'
-Plug 'easymotion/vim-easymotion'
-Plug 'jiangmiao/auto-pairs'
-Plug 'shougo/neopairs.vim'
+Plug 'valloric/ListToggle'
+
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-rooter'
 Plug 'moll/vim-bbye'
+Plug 'junegunn/vim-easy-align'
+Plug 'easymotion/vim-easymotion'
+Plug 'jiangmiao/auto-pairs'
+Plug 'shougo/neopairs.vim'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install()}}
+Plug 'SirVer/ultisnips'
+
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'sebdah/vim-delve'
+
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'pangloss/vim-javascript'
 Plug 'jparise/vim-graphql'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
+Plug 'snoe/vim-sexp'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'guns/vim-clojure-static'
+Plug 'tpope/vim-fireplace'
+
 Plug 'neovimhaskell/haskell-vim'
 Plug 'alx741/vim-hindent'
+
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'uarun/vim-protobuf'
 Plug 'aklt/plantuml-syntax'
 Plug 'pedrohdz/vim-yaml-folds'
 Plug 'scrooloose/vim-slumlord'
-Plug 'tpope/vim-rhubarb'
+
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'tell-k/vim-autopep8'
 Plug 'vim-python/python-syntax'
-Plug 'junegunn/vim-easy-align'
 
 call plug#end()
 
@@ -94,10 +107,10 @@ set t_ut=
 set termguicolors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-let g:material_theme_style = 'palenight'
-let g:material_terminal_italics = 1
+set background=dark
+colorscheme palenight
+let g:palenight_terminal_italics = 1
 
-colorscheme material
 
 " ----------------------------------------------------------------------------
 " Display

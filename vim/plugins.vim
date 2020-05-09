@@ -4,7 +4,7 @@ function! CocCurrentFunction()
 endfunction
 
 let g:lightline = {
-  \   'colorscheme': 'material_vim',
+  \   'colorscheme': 'palenight',
   \   'active': {
   \     'left':[ [ 'mode', 'paste' ],
   \              [ 'cocstatus', 'currentfunction', 'gitbranch', 'readonly', 'filename', 'modified' ]
@@ -53,7 +53,10 @@ let g:fzf_layout = { 'down': 16 }
 let g:fzf_buffers_jump = 1
 
 " NERDTree 
+let NERDTreeShowHidden = 1
+
 autocmd StdinReadPre * let s:std_in=1
+
 " Close everything if only nerdtree is left
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
 function! s:CloseIfOnlyNerdTreeLeft()
@@ -66,24 +69,6 @@ function! s:CloseIfOnlyNerdTreeLeft()
   endif
 endfunction
 
-let NERDTreeShowHidden = 1
-
-" Neomake
-" Call neomake when a file is written to
-let g:neomake_error_sign   = {'text': '⚠', 'texthl': 'NeomakeErrorSign'}
-let g:neomake_warning_sign = {'text': '∆', 'texthl': 'NeomakeWarningSign'}
-let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign'}
-let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
-
-let g:neomake_typescript_enabled_makers = ['tslint']
-let g:neomake_go_enabled_makers = ['golint']
-let g:neomake_open_list = 0
-
-call neomake#configure#automake({
-\ 'BufWinEnter': {'delay': 0},
-\ 'BufWritePost': {'delay': 0},
-\ })
-
 " Easymotion
 let g:EasyMotion_smartcase = 1
 let g:EasyMotion_startofline = 0
@@ -94,8 +79,6 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "snip"]
 
 " Neoterm
-" let g:neoterm_size=winheight(0) " constrain height of terminal window to 33%
-" let g:neoterm_fixedsize=1
 let g:neoterm_default_mod='vertical'
 
 " Go-specific
@@ -131,6 +114,51 @@ augroup END
 " Python-specific
 let g:python_highlight_all = 1
 let g:autopep8_on_save = 0
+
+" Clojure
+let g:sexp_enable_insert_mode_mappings = 1
+let g:clojure_fuzzy_indent_patterns = ['^doto', '^with', '^def', '^let', 'go-loop', 'match', '^context', '^GET', '^PUT', '^POST', '^PATCH', '^DELETE', '^ANY', 'this-as', '^are', '^dofor']
+let g:clojure_align_multiline_strings = 1
+let g:clojure_maxlines = 100
+let g:clj_refactor_prefix_rewriting=0
+
+" RainbowParen config
+let g:rbpt_colorpairs = [
+      \ [118, 118],
+      \ ['yellow', 'yellow'],
+      \ ['cyan', 'cyan'],
+      \ ['red', 'firebrick1'],
+      \ ]
+
+au VimEnter * RainbowParenthesesActivate
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+" s-expression config
+let g:sexp_mappings = {
+      \ 'sexp_outer_list':                'af',
+      \ 'sexp_inner_list':                'if',
+      \ 'sexp_outer_top_list':            'aF',
+      \ 'sexp_inner_top_list':            'iF',
+      \ 'sexp_outer_string':              'as',
+      \ 'sexp_inner_string':              'is',
+      \ 'sexp_outer_element':             'ae',
+      \ 'sexp_inner_element':             'ie',
+      \ 'sexp_move_to_prev_bracket':      '(',
+      \ 'sexp_move_to_next_bracket':      ')',
+      \ 'sexp_indent_top':                '=-',
+      \ 'sexp_round_head_wrap_element':   '<Leader>W',
+      \ 'sexp_swap_element_backward':     '<Leader>T',
+      \ 'sexp_swap_element_forward':      '<Leader>t',
+      \ 'sexp_raise_element':             '<Leader>''',
+      \ 'sexp_emit_head_element':         '<Leader>{',
+      \ 'sexp_emit_tail_element':         '<Leader>}',
+      \ 'sexp_capture_prev_element':      '<Leader>[',
+      \ 'sexp_capture_next_element':      '<Leader>]',
+      \ 'sexp_flow_to_next_open_bracket': '<M-f>',
+      \ 'sexp_flow_to_prev_open_bracket': '<M-b>',
+      \ }
 
 " Markdown-specific
 let vim_markdown_preview_browser='Google Chrome'

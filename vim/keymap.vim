@@ -15,10 +15,6 @@ nnoremap <silent> <leader>to :Ttoggle<CR>
 nnoremap <silent> <leader>th :Tclose<CR>
 nnoremap <silent> <leader>tk :Tkill<CR>
 
-nnoremap <silent> <leader>tf :TREPLSendFile<CR>
-nnoremap <silent> <leader>tl :TREPLSendLine<CR>
-vnoremap <silent> <leader>ts :TREPLSendSelection<CR>
-
 " Lists
 let g:lt_location_list_toggle_map = '<leader><leader>l'
 let g:lt_quickfix_list_toggle_map = '<leader><leader>q'
@@ -34,8 +30,23 @@ nnoremap <Esc> :noh<CR>
 " Insert Mode
 inoremap jj <Esc>
 
-" COC
+" FS navigation
+nnoremap <C-n> :NERDTreeToggle <C-r>=FindRootDirectory()<CR><CR>
+nnoremap <silent> <C-p> :FZFFiles <C-r>=FindRootDirectory()<CR><CR>
+nnoremap <C-b> :FZFBuffers <CR>
+nnoremap <C-a> :FZFAg <CR>
 
+" vim-surround
+nmap <Leader>w( ysie)
+nmap <Leader>w[ ysie]
+nmap <Leader>w{ ysie}
+nmap <Leader>w" ysie"
+vmap <Leader>w( S)
+vmap <Leader>w[ S]
+vmap <Leader>w{ S}
+vmap <Leader>w" S"
+
+"" COC
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>
@@ -81,7 +92,6 @@ nmap <silent> gr <Plug>(coc-references)
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
-" Filetype-specific
 " Go
 autocmd FileType go nnoremap <silent> <leader>db :DlvToggleBreakpoint<CR>
 autocmd FileType go nnoremap <leader>dd :DlvDebug<CR>
@@ -94,10 +104,18 @@ autocmd FileType typescript,typescript.tsx,javascript nmap <silent> <leader>d <P
 autocmd FileType rust nnoremap <leader>gd <Plug>(rust-def)
 autocmd FileType rust nnoremap <leader>gh <Plug>(rust-def-split)
 
-nnoremap <C-n> :NERDTreeToggle <C-r>=FindRootDirectory()<CR><CR>
-nnoremap <silent> <C-p> :FZFFiles <C-r>=FindRootDirectory()<CR><CR>
-nnoremap <C-b> :FZFBuffers <CR>
-nnoremap <C-a> :FZFAg <CR>
-
 " Python
 autocmd FileType python nnoremap <leader>p :call Autopep8()<CR>
+
+" Clojure
+nmap <S-Right> <Plug>(sexp_capture_next_element)<Plug>(sexp_indent)
+nmap <S-Left> <Plug>(sexp_emit_tail_element)<Plug>(sexp_indent)
+imap <S-Right> <C-O><Plug>(sexp_capture_next_element)<C-O><Plug>(sexp_indent)
+imap <S-Left> <C-O><Plug>(sexp_emit_tail_element)<C-O><Plug>(sexp_indent)
+
+nmap <Leader>F <Plug>FireplacePrint<Plug>(sexp_outer_top_list)``
+nmap <Leader>f <Plug>FireplacePrint<Plug>(sexp_outer_list)``
+nmap <Leader>e <Plug>FireplacePrint<Plug>(sexp_inner_element)``
+nmap <Leader>d [<C-D>
+nmap <Leader>E :%Eval<CR>
+nmap <Leader>R cqp(require 'clojure.tools.namespace.repl) (clojure.tools.namespace.repl/refresh)<CR>
