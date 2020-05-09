@@ -4,6 +4,7 @@ nnoremap <Space> <Nop>
 " Integrate with system clipboard
 let mapleader = " "
 
+set commentary
 set surround
 set easymotion
 
