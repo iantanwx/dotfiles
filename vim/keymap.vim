@@ -11,6 +11,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <silent> <leader>bq :Bdelete<CR>
 
 " Neoterm
+tnoremap <Esc> <C-\><C-n>
 nnoremap <silent> <leader>to :Ttoggle<CR>
 nnoremap <silent> <leader>th :Tclose<CR>
 nnoremap <silent> <leader>tk :Tkill<CR>
@@ -116,6 +117,5 @@ imap <S-Left> <C-O><Plug>(sexp_emit_tail_element)<C-O><Plug>(sexp_indent)
 nmap <Leader>F <Plug>FireplacePrint<Plug>(sexp_outer_top_list)``
 nmap <Leader>f <Plug>FireplacePrint<Plug>(sexp_outer_list)``
 nmap <Leader>e <Plug>FireplacePrint<Plug>(sexp_inner_element)``
-nmap <Leader>d [<C-D>
 nmap <Leader>E :%Eval<CR>
 nmap <Leader>R cqp(require 'clojure.tools.namespace.repl) (clojure.tools.namespace.repl/refresh)<CR>

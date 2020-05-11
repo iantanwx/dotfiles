@@ -36,6 +36,8 @@ bindkey -M menuselect '^C'    reset-prompt
 # Movement keys
 # ----------------------------------------------------------------------------
 
+bindkey -M viins  'jk'      vi-cmd-mode
+
 # Home/Fn-Left
 bindkey           '^[[H'    beginning-of-line
 bindkey -M vicmd  '^[[H'    beginning-of-line

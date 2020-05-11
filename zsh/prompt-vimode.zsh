@@ -1,12 +1,11 @@
 # zsh/prompt-vimode.zsh
 #
 # VI mode for zsh readline
-#
 
 export DKO_SOURCE="${DKO_SOURCE} -> prompt-vimode.zsh"
 
 # zsh var, timeout between <Esc> and mode switch update
-export KEYTIMEOUT=2
+export KEYTIMEOUT=10
 
 # http://paulgoscicki.com/archives/2012/09/vi-mode-indicator-in-zsh-prompt/
 # use vi mode even if EDITOR is emacs
