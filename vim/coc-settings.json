@@ -10,11 +10,6 @@
       "trace.server": "verbose",
       "initializationOptions": {}
     },
-    "golang": {
-      "command": "gopls",
-      "rootPatterns": ["go.mod"],
-      "filetypes": ["go"]
-    },
     "haskell": {
       "command": "hie-wrapper",
       "rootPatterns": [".stack.yaml", "cabal.config", "package.yaml"],
@@ -28,7 +23,5 @@
       }
     }
   },
-  "python": {
-    "jediEnabled": false
-  }
+  "python.jediEnabled": true
 }
