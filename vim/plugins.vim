@@ -73,13 +73,18 @@ endfunction
 let g:EasyMotion_smartcase = 1
 let g:EasyMotion_startofline = 0
 
-" UltiSnips
-let g:UltiSnipsRemoveSelectModeMappings=1
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "snip"]
-
 " Neoterm
 let g:neoterm_default_mod='vertical'
+
+" Emmet
+let g:user_emmet_leader_key = ','
+
+" Coc
+" use coc to format files
+command! -nargs=0 Format :call CocAction('format')
+" Alias Prettier cmd to coc-prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+autocmd FileType clojure let b:coc_pairs_disabled = ["'"]
 
 " Go-specific
 function! GoTestCurrentFile()

@@ -24,6 +24,7 @@ let g:lt_quickfix_list_toggle_map = '<leader><leader>q'
 nnoremap <leader>gs :G<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gp :Gpush<CR>
+nnoremap <leader>gv :GV<CR>
 
 " reset search
 nnoremap <Esc> :noh<CR>
@@ -80,14 +81,13 @@ endfunction
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-" Rename
-nmap <leader>rn <Plug>(coc-rename)
-
 " Go to *
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <silent> <leader>gd <Plug>(coc-definition)
+nmap <silent> <leader>gy <Plug>(coc-type-definition)
+nmap <silent> <leader>gi <Plug>(coc-implementation)
+nmap <silent> <leader>gr <Plug>(coc-references)
+nmap <silent> <leader>gR <Plug>(coc-refactor)
+nmap <silent> <leader>gn <Plug>(coc-rename)
 
 " Unimpaired-style diagnostic message navigation
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
@@ -100,13 +100,6 @@ autocmd FileType go nnoremap <leader>dt :DlvTest<CR>
 
 " TypeScript/JavaScript
 autocmd FileType typescript,typescript.tsx,javascript nmap <silent> <leader>d <Plug>(jsdoc)
-
-" Rust
-autocmd FileType rust nnoremap <leader>gd <Plug>(rust-def)
-autocmd FileType rust nnoremap <leader>gh <Plug>(rust-def-split)
-
-" Python
-autocmd FileType python nnoremap <leader>p :call Autopep8()<CR>
 
 " Clojure
 nmap <S-Right> <Plug>(sexp_capture_next_element)<Plug>(sexp_indent)

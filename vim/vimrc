@@ -31,22 +31,34 @@ Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 
 Plug 'scrooloose/nerdtree'
-Plug 'mileszs/ack.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
 Plug 'kassio/neoterm'
 Plug 'valloric/ListToggle'
 
+Plug 'mileszs/ack.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-slash'
+
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/gv.vim'
 
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'moll/vim-bbye'
-Plug 'junegunn/vim-easy-align'
+Plug 'tpope/vim-repeat'
 Plug 'easymotion/vim-easymotion'
+Plug 'junegunn/vim-easy-align'
+Plug 'moll/vim-bbye'
+Plug 'mattn/emmet-vim'
+
+" Add various text objects
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-function'
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-line'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
@@ -66,13 +78,13 @@ Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'sebdah/vim-delve'
 
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'pangloss/vim-javascript'
+Plug 'yuezk/vim-js'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'jparise/vim-graphql'
 Plug 'heavenshell/vim-jsdoc'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'jxnblk/vim-mdx-js'
+Plug 'whatyouhide/vim-textobj-xmlattr'
 
 Plug 'snoe/vim-sexp'
 Plug 'kien/rainbow_parentheses.vim'
@@ -82,16 +94,15 @@ Plug 'tpope/vim-fireplace'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'alx741/vim-hindent'
 
+Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'vim-python/python-syntax'
+
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'uarun/vim-protobuf'
 Plug 'aklt/plantuml-syntax'
 Plug 'pedrohdz/vim-yaml-folds'
 Plug 'scrooloose/vim-slumlord'
-
-Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'tell-k/vim-autopep8'
-Plug 'vim-python/python-syntax'
 
 call plug#end()
 
