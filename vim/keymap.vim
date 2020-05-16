@@ -11,7 +11,8 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <silent> <leader>bq :Bdelete<CR>
 
 " Neoterm
-tnoremap <Esc> <C-\><C-n>
+" Use <Esc> to exit from the terminal buffer
+autocmd FileType neoterm tnoremap <buffer> <Esc> <C-\><C-n>
 nnoremap <silent> <leader>to :Ttoggle<CR>
 nnoremap <silent> <leader>th :Tclose<CR>
 nnoremap <silent> <leader>tk :Tkill<CR>
