@@ -4,11 +4,10 @@
 #
 # Some things from env are here since macOS/OS X doesn't start new env for each
 # term and we may need to reset the values
-#
 
 export DKO_SOURCE="${DKO_SOURCE} -> shell/vars.bash {"
 # Sourced only once, may have been sourced in linux/.xprofile already
-. "${HOME}/.dotfiles/shell/xdg.bash"
+source "${HOME}/.dotfiles/shell/xdg.bash"
 
 # ============================================================================
 # Locale
@@ -123,7 +122,9 @@ export WEECHAT_HOME="${DOTFILES}/weechat"
 export XINITRC="${DOTFILES}/linux/.xinitrc"
 export XAPPLRESDIR="${DOTFILES}/linux"
 
-export DKO_SOURCE="${DKO_SOURCE} }"
+# Wine
+export WINEARCH=win32
+export WINEPREFIX="${HOME}/.wine"
 
 # Nexus
 export NEXUS_REPO_USER="artifactor"
@@ -131,4 +132,5 @@ export NEXUS_REPO_PASS="ErM8AKsB3wIb,/j"
 export NEXUS_REPO_RO_USER="downloader"
 export NEXUS_REPO_RO_PASS="YTE0ZjViODZmYTEy"
 
+export DKO_SOURCE="${DKO_SOURCE} }"
 # vim: ft=sh :

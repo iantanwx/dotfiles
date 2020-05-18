@@ -1,7 +1,6 @@
 # shell/xdg.bash
 #
 # Only loaded once, either by .xprofile or by shell/vars
-#
 
 [ -n "$DKO_SOURCED_XDG" ] && return
 export DKO_SOURCED_XDG=1
