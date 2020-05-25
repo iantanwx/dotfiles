@@ -20,6 +20,14 @@ export BROWSER=google-chrome-stable
 # QT
 export QT_STYLE_OVERRIDE=gtk
 
+# IM override for fcitx Chinese input
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
+# start fcitx
+fcitx
+
 export DKO_SOURCE="${DKO_SOURCE} }"
 
 # vim: ft=sh :
