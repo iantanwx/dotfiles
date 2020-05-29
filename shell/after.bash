@@ -4,7 +4,10 @@
 
 export DKO_SOURCE="${DKO_SOURCE} -> shell/after.bash {"
 
-export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+
+if dko::has "rustc"; then
+  export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+fi
 
 # ============================================================================
 # fzf
@@ -58,11 +61,8 @@ dko::has "vopen" && alias e="vopen"
 # ============================================================================
 # Set kops variables
 # ============================================================================
-export KOPS_STATE_STORE=s3://gofinance-aws-kops/kops
-
-export AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key --profile gojek)
-
-export AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id --profile gojek)
+if dko::has "aws"; then
+fi
 
 # ==============================================================================
 # Grunt completion
