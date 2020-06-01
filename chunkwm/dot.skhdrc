@@ -5,10 +5,10 @@ alt - e : yabai_toggle_monocle
 alt - f : yabai -m window --toggle zoom-fullscreen
 
 # change focused window
-alt - h : yabai -m window --focus west
-alt - j : yabai -m window --focus south
-alt - k : yabai -m window --focus north
-alt - l : yabai -m window --focus east
+cmd - h : yabai -m window --focus west
+cmd - j : yabai -m window --focus south
+cmd - k : yabai -m window --focus north
+cmd - l : yabai -m window --focus east
 
 # use [ and ] to rotate windows
 alt - 0x21 : yabai -m window --focus prev
@@ -29,10 +29,12 @@ alt + cmd - n : yabai -m space --create && \
 # change focused desktop
 ctrl - left : yabai -m space --focus prev
 ctrl - right : yabai -m space --focus next
+cmd - 0x21 : yabai -m space --focus prev
+cmd - 0x1E : yabai -m space --focus next
 
 # change focused display
-ctrl + cmd - left : yabai -m display --focus prev
-ctrl + cmd - right : yabai -m display --focus next
+ctrl + cmd - 0x21 : yabai -m display --focus prev
+ctrl + cmd - 0x1E : yabai -m display --focus next
 
 # move focused container to workspace
 shift + alt - 1 : yabai -m window --space  1;
