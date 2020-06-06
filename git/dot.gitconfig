@@ -128,8 +128,10 @@
 [url "git@heroku.com:"]
 	insteadOf = "heroku:"
 
-[url "git@source.golabs.io:"]
-	insteadOf = https://source.golabs.io/
+[url "git@code.byted.org:"]
+     insteadOf = https://code.byted.org/
+[url "ssh://iantanwx@git.byted.org:29418"]
+     insteadOf = https://git.byted.org
 
 # ============================================================================
 # Repo settings
@@ -191,10 +193,11 @@
 
 [credential]
 	username = "iantanwx"
+	helper = osxkeychain
 
 [user]
 	name = Ian Tan
-	email = ian.tan@go-jek.com
+	email = iantanwx@bytedance.com
 
 # ============================================================================
 # Local
@@ -205,3 +208,5 @@
 	path = "~/.dotfiles/local/gitconfig"
 
 # vim: ft=gitconfig :
+[credential "https://code.byted.org"]
+	username = iantanwx@bytedance.com
