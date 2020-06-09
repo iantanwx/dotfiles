@@ -80,7 +80,7 @@ export HOMEBREW_NO_INSECURE_REDIRECT=1
 export _JAVA_AWT_WM_NONREPARENTING=1
 # ensure that Java applications (i.e. IntelliJ) inherit GTK+ look and feel
 # don't set this on macos
-if [[ $OSTYPE eq == "linux"* ]]; then
+if [[ $OSTYPE == "linux"* ]]; then
   export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dswing.crossplatformlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel ${_JAVA_OPTIONS}"
 fi
 export SDKMAN_DIR="$HOME/.sdkman"
