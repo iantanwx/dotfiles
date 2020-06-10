@@ -210,3 +210,5 @@
 # vim: ft=gitconfig :
 [credential "https://code.byted.org"]
 	username = iantanwx@bytedance.com
+[pull]
+	rebase = false
