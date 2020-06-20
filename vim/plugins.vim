@@ -87,10 +87,7 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 autocmd FileType clojure let b:coc_pairs_disabled = ["'"]
 
 " Go-specific
-function! GoTestCurrentFile()
-  silent GoTest
-endfunction
-
+let g:go_jump_to_error = 0
 let g:go_code_completion_enabled = 0
 let g:go_echo_go_info = 0
 let g:go_doc_keywordprg_enabled = 0
@@ -101,13 +98,6 @@ let g:go_highlight_functions = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:delve_backend = "native"
-
-" automatically run tests for related package
-augroup golang
-  set noshowmode
-  autocmd!
-  autocmd BufWritePost *.go call GoTestCurrentFile()
-augroup END
 
 " Rust-specific
 " augroup rust
