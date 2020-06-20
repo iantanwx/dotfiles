@@ -7,69 +7,11 @@
 # ============================================================================
 
 [alias]
-	a       = add
-	aa      = add .
-
-	b       = branch
-	be      = branch --edit-description
-	bv      = branch --verbose
-	done    = branch --verbose --merged
-	um      = branch --verbose --no-merged
-
-	co      = checkout
-	cb      = checkout -b
-	ct      = checkout --track
-	master  = checkout master
-
-	ci      = commit
-	ca      = commit --amend
-	cm      = commit -m
-
-	get     = config --get
-	cfg     = config --global --edit
-
-	lasttag = describe --tags --abbrev=0
-
-	d       = diff
-	dc      = diff --cached
-	dino    = diff --name-only
-
-	fo      = fetch origin
-
-	g       = grep --break --heading --line-number
-
-	l       = log --abbrev-commit --oneline
-	ll      = log --abbrev-commit --oneline --decorate --all
-	lb      = log --abbrev-commit --oneline --decorate --all --graph
-	lg      = log --abbrev-commit           --decorate --all --graph
-	new     = log --no-merges --abbrev-commit --oneline         ORIG_HEAD..
-	news    = log --no-merges --abbrev-commit --oneline --stat  ORIG_HEAD..
-
-	m       = merge
-
-	pom     = pull --ff-only origin master
-	pr      = pull --rebase
-	pullall = "!f() { git pull \"$@\" && git submodule update --init --recursive; }; f"
-	pum     = pull --ff-only upstream master
-
-	poh     = push origin HEAD
-
-	rb      = rebase
-
-	rso     = remote show origin
-
-	rehard  = reset --hard
-
-	forget  = rm -r --cached
-
-	last    = show --show-signature
-
-	st      = status
-	s       = status --short --branch
-
-	t       = tag
-
-	dsf     = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy  | less --tabs=4 -RFX; }; f"
+  new = "!f() { echo ${1}; echo ${2}; git fetch && git checkout -b ${1} origin/${2:-master}; }; f"
+  rvm = "!f() { git push origin HEAD:refs/for/master%${1}; }; f"
+  rv = "!f() { git push origin HEAD:refs/for/${1:-master}%${2}; }; f"
+  fp = "!f() { git fetch origin refs/changes/$(printf "%02d" $(expr ${1} % 100))/${1}/${2:-1} && git checkout FETCH_HEAD;}; f"
+  cin = commit --amend --no-edit
 
 	# ---------------------------------------------------------------------------
 	# Shell commands
@@ -212,3 +154,5 @@
 	username = iantanwx@bytedance.com
 [pull]
 	rebase = false
+[init]
+	templatedir = /Users/iantan/.gittemplates
