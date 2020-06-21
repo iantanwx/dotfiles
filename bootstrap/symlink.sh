@@ -37,6 +37,9 @@ __symlink() {
   dko::symlink vim                              .config/nvim
   dko::symlink vim/ideavimrc                    .ideavimrc
 
+  # spacemacs
+  dko::symlink spacemacs                        .spacemacs.d
+
   # hyper.app
   dko::symlink hyper.app/dot.hyper.js           .hyper.js
 
