@@ -76,9 +76,6 @@ let g:EasyMotion_startofline = 0
 " Neoterm
 let g:neoterm_default_mod='vertical'
 
-" Emmet
-let g:user_emmet_leader_key = ','
-
 " Coc
 " use coc to format files
 command! -nargs=0 Format :call CocAction('format')
