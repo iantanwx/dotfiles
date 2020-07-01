@@ -58,7 +58,7 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 
 " Accept currently selected completion candidate with <CR>
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Close preview window once completion is done
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
