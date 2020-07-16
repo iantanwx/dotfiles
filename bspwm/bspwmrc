@@ -30,6 +30,6 @@ sxhkd &
 dunst &
 ~/.config/polybar/launch.sh &
 redshift -c ~/.config/redshift/redshift.conf &
-feh --bg-fill ~/Pictures/wallpaper_tokyo_night.jpg
+feh --bg-fill ~/Pictures/tuscany_nights.jpg
 picom &
 xsetroot -cursor_name left_ptr
