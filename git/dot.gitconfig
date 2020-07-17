@@ -156,4 +156,4 @@
 [pull]
 	rebase = false
 [init]
-	templatedir = /Users/iantan/.gittemplates
+	templatedir = ~/.gittemplates
