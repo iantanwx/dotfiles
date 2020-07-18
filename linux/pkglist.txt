@@ -46,6 +46,7 @@ groff
 gucharmap
 highlight
 htop
+i2c-tools
 inkscape
 intellij-idea-ultimate-edition
 jq
@@ -95,6 +96,7 @@ numlockx
 nvidia
 nvidia-settings
 oath-toolkit
+openrgb
 openssh
 openssl-1.0
 otf-fira-mono
