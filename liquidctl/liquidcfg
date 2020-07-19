@@ -1,0 +1,33 @@
+#!/bin/bash -xe
+#
+# Configure my liquidctl devices.
+#
+# The LEDs are used to convey any eventual failures in a visual way.  This is
+# useful for unattained operation, such as automated configuration during
+# system boot.
+#
+# Once everything has been configured, the script waits a few seconds and
+# prints the current status (for logging), before finally terminating.
+
+LL="liquidctl $EXTRAOPTIONS"
+KRAKEN="--vendor 0x1e71 --product 0x2007"
+COLOUR="5c2a9d"
+
+function panic() {
+	code=$?
+	$LL $KRAKEN set ring color pulse ff2608 --speed faster || true
+	exit $code
+}
+
+function soft_panic() {
+	$LL $CLC set led color blinking ff0010 || true
+}
+
+# hack
+sleep 1
+
+liquidctl --version || panic
+$LL list -v || panic
+
+$LL $KRAKEN set ring color fixed "$COLOUR" || panic
+$LL $KRAKEN set pump speed 24 50 35 80 39 80 40 100 || panic
