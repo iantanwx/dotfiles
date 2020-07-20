@@ -10,10 +10,6 @@ cmd - j : yabai -m window --focus south
 cmd - k : yabai -m window --focus north
 cmd - l : yabai -m window --focus east
 
-# use [ and ] to rotate windows
-alt - 0x21 : yabai -m window --focus prev
-alt - 0x1E : yabai -m window --focus next
-
 # move focused window
 shift + alt - h : yabai -m window --warp west
 shift + alt - j : yabai -m window --warp south
@@ -29,8 +25,8 @@ alt + cmd - n : yabai -m space --create && \
 # change focused desktop
 ctrl - left : yabai -m space --focus prev
 ctrl - right : yabai -m space --focus next
-cmd - 0x21 : yabai -m space --focus prev
-cmd - 0x1E : yabai -m space --focus next
+alt - 0x21 : yabai -m space --focus prev
+alt - 0x1E : yabai -m space --focus next
 
 alt - 1 : yabai -m space --focus 1
 alt - 2 : yabai -m space --focus 2
