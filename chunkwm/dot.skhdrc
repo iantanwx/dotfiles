@@ -16,12 +16,6 @@ shift + alt - j : yabai -m window --warp south
 shift + alt - k : yabai -m window --warp north
 shift + alt - l : yabai -m window --warp east
 
-# create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
-alt + cmd - n : yabai -m space --create && \
-                  index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
-                  yabai -m window --space "${index}" && \
-                  yabai -m space --focus "${index}"
-
 # change focused desktop
 ctrl - left : yabai -m space --focus prev
 ctrl - right : yabai -m space --focus next
@@ -42,6 +36,10 @@ alt - 0 : yabai -m space --focus 10
 # change focused display
 ctrl + cmd - 0x21 : yabai -m display --focus prev
 ctrl + cmd - 0x1E : yabai -m display --focus next
+
+# move desktop to display
+ctrl + alt - 1 : yabai -m space --display 1
+ctrl + alt - 2 : yabai -m space --display 2
 
 # move focused container to workspace
 shift + alt - 1 : yabai -m window --space 1;
