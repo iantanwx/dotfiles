@@ -9,7 +9,7 @@
 # Once everything has been configured, the script waits a few seconds and
 # prints the current status (for logging), before finally terminating.
 
-LL="liquidctl $EXTRAOPTIONS"
+LL="/home/itwx/.pyenv/shims/liquidctl $EXTRAOPTIONS"
 KRAKEN="--vendor 0x1e71 --product 0x2007"
 COLOUR="5c2a9d"
 
@@ -26,7 +26,7 @@ function soft_panic() {
 # hack
 sleep 1
 
-liquidctl --version || panic
+$LL --version || panic
 $LL list -v || panic
 
 $LL $KRAKEN set ring color fixed "$COLOUR" || panic

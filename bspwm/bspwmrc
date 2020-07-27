@@ -14,10 +14,13 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 bspc rule -a Google-chrome desktop='I'
-bspc rule -a Franz desktop='III'
-bspc rule -a WeChat desktop='III'
+bspc rula -a okular desktop='III'
 bspc rule -a Slack desktop='IV'
 bspc rule -a zoom desktop='IV'
+bspc rule -a Franz desktop='IV'
+bspc rule -a WeChat desktop='IV'
+# don't manage WeChat's emoticon context menu
+bspc rule -a EmotionView manage=off
 bspc rule -a Spotify desktop='V'
 bspc rule -a Termite desktop='VI'
 bspc rule -a jetbrains-idea desktop='VII'
