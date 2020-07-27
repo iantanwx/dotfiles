@@ -68,11 +68,9 @@
 [url "git://gist.github.com/"]
 	insteadOf = "gist:"
 
-[url "git@heroku.com:"]
-	insteadOf = "heroku:"
-
 [url "git@code.byted.org:"]
      insteadOf = https://code.byted.org/
+
 [url "ssh://iantanwx@git.byted.org:29418"]
      insteadOf = https://git.byted.org
 

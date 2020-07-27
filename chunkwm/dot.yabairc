@@ -38,8 +38,9 @@ yabai -m config window_gap                   0
 # rules
 # yabai -m rule --add app="^Google Chrome$" title="Ian \(Personal\)$" space=1
 # yabai -m rule --add app="^Google Chrome$" title="Ian Tan \(Work\)$" space=2
-yabai -m rule --add app=Between space=3
 yabai -m rule --add app=Lark space=3
+yabai -m rule --add app=Feishu space=3
+yabai -m rule --add app=Between space=4
 yabai -m rule --add app=Franz space=4
 yabai -m rule --add app=WeChat space=4
 yabai -m rule --add app=Zoom space=4
