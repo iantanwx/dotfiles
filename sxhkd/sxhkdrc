@@ -3,15 +3,15 @@
 #
 
 # terminal emulator
-super + Return
+alt + Return
 	termite
 
 # program launcher
-super + @space
+alt + @space
   rofi -show combi
 
 # make sxhkd reload its configuration files:
-super + Escape
+alt + Escape
 	pkill -USR1 -x sxhkd
 
 # lock screen
