@@ -8,11 +8,15 @@ autoconf
 automake
 base
 bash-completion
-bind-tools
+bind
 binutils
 bison
+bluez
+bluez-utils
 browsh
 bspwm
+clang
+clion
 clojure-lsp-bin
 conky
 deno
@@ -96,7 +100,7 @@ numlockx
 nvidia
 nvidia-settings
 oath-toolkit
-openrgb
+okular
 openssh
 openssl-1.0
 otf-fira-mono
