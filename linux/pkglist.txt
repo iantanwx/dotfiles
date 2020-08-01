@@ -1,6 +1,7 @@
 adobe-source-han-sans-cn-fonts
 adobe-source-han-sans-otc-fonts
 adobe-source-han-serif-cn-fonts
+aic94xx-firmware
 alsa-plugins
 alsa-utils
 atool
@@ -155,6 +156,7 @@ virtualbox-host-modules-arch
 visual-studio-code-bin
 vlc
 w3m
+wd719x-firmware
 webstorm
 wget
 wine
