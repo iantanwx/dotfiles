@@ -38,6 +38,7 @@ fcitx-googlepinyin
 fcitx-qt5
 feh
 ffmpegthumbnailer
+flameshot
 flex
 font-manager
 franz-bin
@@ -75,6 +76,7 @@ linux
 linux-firmware
 lshw
 lsof
+luit
 m4
 make
 materia-gtk-theme
@@ -176,7 +178,6 @@ xorg-font-util
 xorg-fonts-100dpi
 xorg-fonts-75dpi
 xorg-iceauth
-xorg-luit
 xorg-mkfontscale
 xorg-server-devel
 xorg-server-xephyr
