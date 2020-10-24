@@ -18,6 +18,13 @@ alt + Escape
 ctrl + alt + q
   dm-tool lock
 
+# screenshot screen
+super + shift + 3
+  flameshot screen -p ~/screenshots
+# screenshot area
+super + shift + 4
+  flameshot gui -p ~/screenshots
+
 #
 # bspwm hotkeys
 #
@@ -85,26 +92,6 @@ alt + {grave,Tab}
 # focus or send to the given desktop
 alt + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
-
-#
-# preselect
-#
-
-# preselect the direction
-alt + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
-
-# preselect the ratio
-alt + ctrl + {1-9}
-	bspc node -o 0.{1-9}
-
-# cancel the preselection for the focused node
-alt + ctrl + space
-	bspc node -p cancel
-
-# cancel the preselection for the focused desktop
-alt + ctrl + shift + space
-	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
 # move/resize
