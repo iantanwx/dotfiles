@@ -14,13 +14,12 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 bspc rule -a Google-chrome desktop='I'
-bspc rula -a okular desktop='III'
+bspc rula -a Feishu desktop='III'
 bspc rule -a Slack desktop='IV'
 bspc rule -a zoom desktop='IV'
 bspc rule -a Franz desktop='IV'
-bspc rule -a WeChat desktop='IV'
-# don't manage WeChat's emoticon context menu
-bspc rule -a EmotionView manage=off
+bspc rule -a WeChat desktop='IV' state=pseudo_tiled
+bspc rule -a between.exe:Between desktop='IV' state=pseudo_tiled
 bspc rule -a Spotify desktop='V'
 bspc rule -a Termite desktop='VI'
 bspc rule -a jetbrains-idea desktop='VII'
@@ -28,6 +27,9 @@ bspc rule -a jetbrains-clion desktop='VIII'
 bspc rule -a Postman desktop='IX'
 bspc rule -a Nemo desktop='X'
 bspc rule -a Notion desktop='X'
+
+# don't manage WeChat's emoticon context menu
+bspc rule -a EmotionView manage=off
 
 sxhkd &
 dunst &
