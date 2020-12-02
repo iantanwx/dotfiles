@@ -154,4 +154,4 @@
 [pull]
 	rebase = false
 [init]
-	templatedir = ~/.gittemplates
+	templatedir = /home/itwx/.gittemplates

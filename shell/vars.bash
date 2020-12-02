@@ -76,13 +76,16 @@ export DOCKER_CONFIG="${XDG_CONFIG_HOME}/docker"
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_INSECURE_REDIRECT=1
 
-# sdkman - sourced to ensure JAVA_HOME is set correctly for non-interactive shells
+# fix intellij for bspwm
 export _JAVA_AWT_WM_NONREPARENTING=1
 # ensure that Java applications (i.e. IntelliJ) inherit GTK+ look and feel
 # don't set this on macos
 if [[ $OSTYPE == "linux"* ]]; then
   export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dswing.crossplatformlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel ${_JAVA_OPTIONS}"
+  export ANDROID_SDK_ROOT='/opt/android-sdk'# Android SDK
 fi
+
+# sdkman - sourced to ensure JAVA_HOME is set correctly for non-interactive shells
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
 

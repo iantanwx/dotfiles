@@ -71,4 +71,12 @@ PATH="${HOME}/.helmenv/bin:${PATH}"
 PATH="${DOTFILES}/bin:${PATH}"
 PATH="${HOME}/.local/bin:${PATH}"
 
+if [[ $OSTYPE == "linux"* && ! -z ${ANDROID_HOME+x} ]]; then
+  PATH=$PATH:$ANDROID_HOME/emulator
+  PATH=$PATH:$ANDROID_HOME/platform-tools/
+  PATH=$PATH:$ANDROID_HOME/tools/bin/
+  PATH=$PATH:$ANDROID_HOME/tools/
+  PATH=$ANDROID_HOME/emulator:$PATH
+fi
+
 export PATH
