@@ -13,6 +13,11 @@ else
   export GOPATH="${HOME}/Projects/go"
 fi
 
+# bytedance-specific
+export GOPRIVATE="*.byted.org,*.everphoto.cn"
+export GOSUMDB="sum.golang.google.cn"
+export GOPROXY="https://goproxy.byted.org|https://goproxy.cn|direct"
+
 # Ensure that $GOPATH/bin is on PATH
 export PATH="${GOPATH}/bin:${PATH}"
 

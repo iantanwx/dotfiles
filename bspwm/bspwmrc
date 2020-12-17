@@ -19,7 +19,7 @@ bspc rule -a Slack desktop='IV'
 bspc rule -a zoom desktop='IV'
 bspc rule -a Franz desktop='IV'
 bspc rule -a WeChat desktop='IV' state=pseudo_tiled
-bspc rule -a between.exe:Between desktop='IV' state=pseudo_tiled
+bspc rule -a Between desktop='IV' state=pseudo_tiled
 bspc rule -a Spotify desktop='V'
 bspc rule -a Termite desktop='VI'
 bspc rule -a jetbrains-idea desktop='VII'
@@ -36,5 +36,5 @@ dunst &
 ~/.config/polybar/launch.sh &
 redshift -c ~/.config/redshift/redshift.conf &
 feh --bg-fill ~/Pictures/tuscany_nights.jpg
-picom &
+# picom &
 xsetroot -cursor_name left_ptr
