@@ -5,6 +5,7 @@ adobe-source-han-serif-cn-fonts
 aic94xx-firmware
 alsa-plugins
 alsa-utils
+android-file-transfer
 android-sdk
 android-sdk-build-tools
 android-sdk-platform-tools
@@ -23,6 +24,7 @@ bash-completion
 bind
 binutils
 bison
+blueman
 bluez
 bluez-utils
 browsh
@@ -54,7 +56,6 @@ figma-linux
 flameshot
 flex
 flutter
-font-manager
 franz-bin
 fuse2
 fzf
@@ -199,7 +200,6 @@ xorg-server-devel
 xorg-server-xephyr
 xorg-server-xnest
 xorg-server-xvfb
-xorg-server-xwayland
 xorg-sessreg
 xorg-smproxy
 xorg-x11perf
@@ -229,6 +229,7 @@ xorg-xrefresh
 xorg-xset
 xorg-xsetroot
 xorg-xvinfo
+xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
