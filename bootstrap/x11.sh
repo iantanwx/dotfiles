@@ -21,4 +21,4 @@ dko::status "Symlinking X11 dotfiles"
 # this probably isn't sourced by your session
 dko::symlink linux/.xinitrc       .xinitrc
 dko::symlink linux/.xprofile      .xprofile
-
+dko::symlink linux/.Xmodmap       .Xmodmap

@@ -1,0 +1,9 @@
+clear mod1
+clear mod4
+keycode 64 = Alt_L
+keycode 108 = Alt_R
+keycode 133 = Meta_L
+keycode 134 = Meta_R
+keycode 205 = NoSymbol
+add mod1 = Alt_L Alt_R
+add mod4 = Meta_L Meta_R
