@@ -30,4 +30,6 @@ fcitx
 
 export DKO_SOURCE="${DKO_SOURCE} }"
 
+usermodmap="${HOME}/.Xmodmap"
+
 # vim: ft=sh :
