@@ -18,6 +18,7 @@ bspc rula -a Feishu desktop='III'
 bspc rule -a Slack desktop='IV'
 bspc rule -a zoom desktop='IV'
 bspc rule -a Franz desktop='IV'
+bspc rule -a Signal desktop='IV'
 bspc rule -a WeChat desktop='IV' state=pseudo_tiled
 bspc rule -a Between desktop='IV' state=pseudo_tiled
 bspc rule -a Spotify desktop='V'
