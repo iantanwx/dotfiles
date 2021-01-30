@@ -39,3 +39,4 @@ redshift -c ~/.config/redshift/redshift.conf &
 feh --bg-fill ~/Pictures/tuscany_nights.jpg
 # picom &
 xsetroot -cursor_name left_ptr
+xmodmap ~/.Xmodmap
