@@ -3,7 +3,7 @@
 #
 
 # terminal emulator
-alt + Return
+super + Return
 	termite
 
 # program launcher
@@ -15,7 +15,7 @@ alt + Escape
 	pkill -USR1 -x sxhkd
 
 # lock screen
-ctrl + alt + q
+super + alt + q
   dm-tool lock
 
 # screenshot screen
