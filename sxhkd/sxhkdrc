@@ -2,10 +2,6 @@
 # wm independent hotkeys
 #
 
-# terminal emulator
-super + Return
-	termite
-
 # program launcher
 alt + @space
   rofi -show combi
